@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
-
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import PaddingWrapper from "./paddingWrapper";
 const Hero = () => {
   return (
-    <div className=" relative h-screen ">
+    <div className=" relative min-h-screen lg:h-screen ">
       <Image
         src={"/homebg.png"}
         alt="hero"
@@ -11,29 +12,29 @@ const Hero = () => {
         className="absolute object-center object-cover"
       />
       <span className="overlay z-1"></span>
-      <div
-        className="flex flex-col items-center justify-center h-full z-3 text-white  md:flex-row md:justify-between px-5 lg:px-20"
-        style={{ zIndex: 10 }}
-      >
-        <article className="z-10 mb-14 mt-24 ">
-          <p className="text-2xl lg:text-5xl mb-5">
-            Heyo my name is Lorenze <span>👋</span>
+      <PaddingWrapper className="flex flex-col items-center justify-center h-full z-10 text-white  md:flex-row md:justify-between">
+        <article className="z-10 mb-14 mt-24 lg:mt-0">
+          <p className="text-4xl lg:text-6xl mb-5">
+            Lorenze Hernandez<span>👋</span>
           </p>
-          <h1 className="text-2xl text-white z-3 mb-10 lg:text-5xl bg-green-400 py-2 pl-2 lg:w-full w-11/12">
-            Front End Web Developer 💻
+          <h1 className="text-2xl text-white z-3 mb-10 lg:text-3xl  py-2 lg:w-full w-11/12">
+            Web Developer from Los Angeles.
           </h1>
-          <p>My goal is to make a piece of tech that makes a difference.</p>
+          <span className="flex text-3xl">
+            <a href="https://github.com/lorenzejay" target="_blank">
+              <FaGithub className="mr-3 rounded-full" />
+            </a>
+            <a href="https://www.linkedin.com/in/lorenzehernandez/" target="_blank">
+              <FaLinkedin />
+            </a>
+          </span>
         </article>
-        <Image
+        <img
           src={"/ljpp.jpg"}
-          layout="intrinsic"
           alt="this is a portrait of the author"
-          height="250"
-          width="250"
-          quality="75"
-          className="rounded-full z-3 object-cover"
+          className="rounded-full z-10 object-cover w-64 h-64 lg:w-80 lg:h-80 mb-5"
         />
-      </div>
+      </PaddingWrapper>
     </div>
   );
 };
