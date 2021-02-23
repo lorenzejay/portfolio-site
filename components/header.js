@@ -76,7 +76,6 @@ export const MobileIcon = styled.div`
 `;
 export const NavMenu = styled.ul`
   display: flex;
-  justify-content: center;
   list-style: none;
   text-align: center;
   margin-right: 22px;
@@ -114,14 +113,14 @@ export const NavMenu = styled.ul`
 const Header = ({ toggle }) => {
   return (
     <header
-      className="flex justify-between w-full items-center px-5 lg:px-20 t-0 z-10 text-white absolute bg-transparent"
+      className="flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 text-white absolute bg-transparent"
       style={{ height: "10vh" }}
     >
-      <h1 className="text-3xl font-bold uppercase">Lorenze Jay</h1>
-      <MobileIcon onClick={toggle}>
+      <h1 className="text-3xl font-bold uppercase">Lorenze H.</h1>
+      <MobileIcon onClick={toggle} className="block lg:hidden">
         <FaBars />
       </MobileIcon>
-      <NavMenu className="flex justify-around w-44 text-white items-center w-80 gap-5 lg:text-xl">
+      <NavMenu className="flex justify-end text-white items-center gap-5 lg:text-xl">
         <li>
           <Link href="/">Home</Link>
         </li>
