@@ -113,7 +113,7 @@ export const NavMenu = styled.ul`
 const Header = ({ toggle }) => {
   return (
     <header
-      className="flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 text-white absolute bg-transparent"
+      className="flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 text-white absolute bg-transparent"
       style={{ height: "10vh" }}
     >
       <h1 className="text-3xl font-bold uppercase">Lorenze H.</h1>
