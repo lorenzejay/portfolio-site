@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
-import { FaRegLightbulb, FaLightbulb } from "react-icons/fa";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -40,6 +39,7 @@ export const SideBarMenu = styled.ul`
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: white;
   .darkmode-btn {
     cursor: pointer;
     margin-bottom: 15px;
