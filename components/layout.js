@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./header";
 import SideBar from "./sidebar";
 
-const Layout = ({ children }) => {
+const Layout = ({ children , homepage}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <SideBar toggle={toggle} isOpen={isOpen} />
-      <Header toggle={toggle} />
+      <Header toggle={toggle} homePage={homepage} />
       <div>{children}</div>
     </>
   );
