@@ -29,3 +29,10 @@ a {
   background: black;
   opacity: 75%;
 }
+
+.project-grid {
+  transition: all 1s;
+}
+
+.project-grid:hover {
+}

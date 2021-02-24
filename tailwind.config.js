@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    gridColumn: ["responsive", "hover"],
+    gridColumnStart: ["responsive", "hover"],
+    gridColumnEnd: ["responsive", "hover"],
   },
   plugins: [],
 };
