@@ -65,7 +65,7 @@ import { FaBars } from "react-icons/fa";
 
 export const MobileIcon = styled.div`
   display: none;
-  color: #fff;
+  /* color: #fff; */
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -110,25 +110,37 @@ export const NavMenu = styled.ul`
 //   }
 // `;
 
-const Header = ({ toggle }) => {
+const Header = ({ toggle, homePage = false }) => {
   return (
     <header
-      className="flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 text-white absolute bg-transparent"
+      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 absolute bg-transparent ${
+        homePage ? "text-white" : "text-black"
+      }`}
       style={{ height: "10vh" }}
     >
       <h1 className="text-3xl font-bold uppercase">Lorenze H.</h1>
       <MobileIcon onClick={toggle} className="block lg:hidden">
-        <FaBars />
+        <FaBars className={`${homePage ? "text-white" : "text-black"}`} />
       </MobileIcon>
-      <NavMenu className="flex justify-end text-white items-center gap-5 lg:text-xl">
+      <NavMenu
+        className={`flex justify-end ${
+          homePage ? "text-white" : "text-black"
+        } items-center gap-5 lg:text-xl`}
+      >
         <li>
-          <Link href="/">Home</Link>
+          <Link className={`${homePage ? "text-white" : "text-black"}`} href="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link className={`${homePage ? "text-white" : "text-black"}`} href="/about">
+            About
+          </Link>
         </li>
         <li>
-          <Link href="/Blog">Blog</Link>
+          <Link className={`${homePage ? "text-white" : "text-black"}`} href="/projects">
+            Projects
+          </Link>
         </li>
       </NavMenu>
     </header>
