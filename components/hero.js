@@ -12,7 +12,7 @@ const Hero = () => {
         className="absolute object-center object-cover rounded-lg"
       />
       <span className="overlay z-1 rounded-3xl"></span>
-      <div className="px-10 lg:pt-32  flex flex-col items-center justify-center h-full z-10 text-white  md:flex-row md:justify-between">
+      <div className="px-10 lg:pt-20  flex flex-col items-center justify-center h-full z-10 text-white  md:flex-row md:justify-between">
         <article className="z-10 mb-14 mt-24 lg:mt-0">
           <p className="text-5xl lg:text-6xl mb-5">
             Lorenze Hernandez<span>👋</span>
