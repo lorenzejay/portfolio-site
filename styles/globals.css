@@ -43,3 +43,12 @@ a {
   height: 48px;
   background: black;
 }
+
+form input,
+form textarea {
+  outline: none;
+}
+form input:focus,
+form textarea:focus {
+  border-bottom: 2px solid green !important;
+}

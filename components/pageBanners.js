@@ -1,8 +1,10 @@
 import React from "react";
 
-const PageBanners = ({ title }) => {
+const PageBanners = ({ title, className }) => {
   return (
-    <div className="bg-gray-300 pt-20 relative h-80 flex justify-center">
+    <div
+      className={` mt-24 relative  w-full lg:h-48  rounded-lg bg-gray-300 flex justify-center ${className}`}
+    >
       <h1 className="text-5xl text-center my-auto uppercase text-bold">{title}</h1>
     </div>
   );

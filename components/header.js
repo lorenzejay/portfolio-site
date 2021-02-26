@@ -141,8 +141,8 @@ const Header = ({ toggle, homePage = false }) => {
           </Link>
         </li>
         <li>
-          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/about">
-            About
+          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/contact">
+            Contact
           </Link>
         </li>
         <li>
