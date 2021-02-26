@@ -66,10 +66,10 @@ const ProjectSection = () => {
           ></iframe>
         </div>
 
-        <div className="col-span-3 lg:gap-3 w-full flex items-center justify-center">
+        <div className="col-span-3 w-full flex flex-col lg:flex-row items-center justify-center">
           <motion.div
-            className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-72 2xl:h-96 p-8 rounded-lg flex flex-col items-center lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out ${
-              span3 ? "w-2/3" : "w-1/3"
+            className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-72 2xl:h-96 p-8 rounded-lg flex flex-col items-center lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out lg:mr-3 ${
+              span3 ? "lg:w-2/3" : "lg:w-1/3"
             }`}
             transition={{ duration: 2 }}
             onHoverStart={growGrid3}
@@ -97,16 +97,14 @@ const ProjectSection = () => {
             {
               <img
                 src={"/project1mockup.png"}
-                className={`object-cover w-3/4 lg:w-1/2 lg:h-56 lg:mx-0 ${
-                  span4 ? "lg:hidden" : "lg:block"
-                }`}
+                className={`object-cover h-80 lg:h-64 lg:mx-0 ${span4 ? "lg:hidden" : "lg:block"}`}
               />
             }
           </motion.div>
 
           <motion.div
-            className={`expanding-grid-item bg-blue-700  h-72 2xl:h-96 p-8 rounded-lg flex relative my-5 lg:my-0 ${
-              span4 ? "w-2/3" : "w-1/3"
+            className={`expanding-grid-item w-full bg-blue-700  h-72 2xl:h-96 p-8 rounded-lg flex relative my-5 lg:my-0 ${
+              span4 ? "lg:w-2/3" : "lg:w-1/3"
             }`}
             onHoverStart={growGrid4}
             onHoverEnd={growReset}

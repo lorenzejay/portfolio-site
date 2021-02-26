@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className=" flex flex-col-reverse md:flex-row items-center justify-between gap-4 xl:gap-10 lg:min-h-screen">
+    <section className=" flex flex-col-reverse md:flex-row items-center justify-between gap-4 xl:gap-10 lg:min-h-screen mt-16">
       <img src={"/webdev.svg"} className="w-3/4 lg:w-1/2" />
       <div className="flex flex-col mb-5 items-start">
         <h2 className="text-3xl xl:text-5xl">
