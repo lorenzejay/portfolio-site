@@ -1,9 +1,8 @@
-import PaddingWrapper from "./paddingWrapper";
 import { BiRightTopArrowCircle } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ProjectSection = () => {
   const [span3, setSpan3] = useState(true);
@@ -23,20 +22,16 @@ const ProjectSection = () => {
     setSpan4(false);
   };
 
-  console.log("span3", span3);
-  console.log("span4", span4);
+  // console.log("span3", span3);
+  // console.log("span4", span4);
 
   //grid of 3 cols
   return (
-    <PaddingWrapper className="lg:min-h-screen">
-      <motion.section
-        className="project-grid flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 text-white lg:gap-3 pt-10"
-        initial={{ x: -300 }}
-        animate={{ x: 0 }}
-      >
-        <div className="bg-blue-400 h-80 xl:h-96 p-8 col-span-1 rounded-lg flex flex-col">
-          <h3 className="text-4xl xl:text-5xl ">Uplift Digital Solutions</h3>
-          <p className="text-sm my-3">
+    <section className="lg:min-h-screen">
+      <div className="project-grid flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 text-white lg:gap-3 pt-10">
+        <div className="bg-blue-400 h-80 2xl:h-96 p-8 col-span-1 rounded-lg flex flex-col">
+          <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Uplift Digital Solutions</h3>
+          <p className="text-sm lg:text-lg 2xl:text-2xl my-3">
             Freelance Website which aims to help buisness utilize their websites to generate more
             revenue.
           </p>
@@ -45,10 +40,10 @@ const ProjectSection = () => {
           </a>
         </div>
 
-        <div className="bg-red-400 col-span-2 min-h-80 lg:h-80 xl:h-96 p-8 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
+        <div className="bg-red-400 col-span-2 min-h-80 lg:h-80 2xl:h-96 p-8 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
           <div className="xl:w-1/2">
-            <h3 className="text-4xl xl:text-5xl ">The Sizzzle</h3>
-            <p className="text-sm xl:text-2xl my-3">
+            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">The Sizzzle</h3>
+            <p className="text-sm lg:text-lg 2xl:text-2xl my-3">
               Revolutionizing Food Blogging into a simpler and minimalist social media type
               application.
             </p>
@@ -65,82 +60,93 @@ const ProjectSection = () => {
             </div>
           </div>
           <iframe
-            className="w-full h-72  lg:w-1/2 lg:h-52 xl:h-72 pt-10"
-            src="https://www.youtube.com/embed/gZYTl25idOU"
+            className="w-full h-72 lg:w-1/2 lg:h-52 2xl:h-72 pt-14"
+            src="https://www.youtube.com/embed/yH-b5kJo_mY"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
 
-        <motion.div
-          className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-80 xl:h-96 p-8 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out ${
-            span3 ? "lg:col-span-2" : "lg:col-span-1"
-          }`}
-          transition={{ duration: 2 }}
-          onHoverStart={growGrid3}
-        >
-          <div>
-            <h3 className="text-4xl xl:text-5xl ">Photographer Preset Shop</h3>
-            <p className="text-sm xl:text-2xl my-3">
-              Created a site that generate $800 of passive income selling digital custom digital
-              presets.
-            </p>
-            <p className="text-xs xl:text-lg">Built with Gatsby.js.</p>
-            <div className="flex text-xl items-center mt-3">
-              <a href="https://github.com/lorenzejay/the-sizzzle" target="_blank" className="mr-2">
-                <FaGithub />
-              </a>
-              <a href="https://thesizzzle.herokuapp.com/" target="_blank" className="underline">
-                Demo
-              </a>
-            </div>
-          </div>
-          {
-            <img
-              src={"/project1mockup.png"}
-              className={`w-3/4 mx-auto lg:mx-0 lg:w-1/2 ${span3 ? "lg:block" : "lg:hidden"}`}
-            />
-          }
-        </motion.div>
-
-        <motion.div
-          className={`expanding-grid-item bg-blue-700  h-80 xl:h-96 p-8 rounded-lg flex relative my-5 lg:my-0 ${
-            span4 && "col-span-2"
-          } col-span-auto`}
-          onHoverStart={growGrid4}
-          onHoverEnd={growReset}
-          whileHover={{ transition: { duration: 1 } }}
-        >
-          <h3 className="text-4xl xl:text-5xl w-1/2">See all projects</h3>
-          <motion.img
-            src={"/unicornhand.svg"}
-            className={`absolute bottom-0 left-0 right-0 w-32 h-32 mx-auto hidden ${
-              span4 ? "lg:block" : "lg:hidden"
+        <div className="col-span-3 lg:gap-3 w-full flex items-center justify-center">
+          <motion.div
+            className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-80 2xl:h-96 p-8 rounded-lg flex flex-col items-center lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out ${
+              span3 ? "w-2/3" : "w-1/3"
             }`}
-            transition={{
-              yoyo: Infinity,
-              from: 0,
-              duration: 0.2,
-              ease: "easeInOut",
-              type: "tween",
-            }}
-            whileHover={{ rotate: 20 }}
-          />
-          {/* <img
+            transition={{ duration: 2 }}
+            onHoverStart={growGrid3}
+          >
+            <div>
+              <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">Photographer Preset Shop</h3>
+              <p className="text-sm lg:text-lg 2xl:text-2xl my-3 ">
+                Created a site that generate $800 of passive income selling digital custom digital
+                presets.
+              </p>
+              <p className="text-xs xl:text-lg">Built with Gatsby.js.</p>
+              <div className="flex text-xl items-center mt-3">
+                <a
+                  href="https://github.com/lorenzejay/the-sizzzle"
+                  target="_blank"
+                  className="mr-2"
+                >
+                  <FaGithub />
+                </a>
+                <a href="https://thesizzzle.herokuapp.com/" target="_blank" className="underline">
+                  Demo
+                </a>
+              </div>
+            </div>
+            {
+              <img
+                src={"/project1mockup.png"}
+                className={`object-cover w-3/4 lg:w-1/2 lg:h-56 lg:mx-0 ${
+                  span4 ? "lg:hidden" : "lg:block"
+                }`}
+              />
+            }
+          </motion.div>
+
+          <motion.div
+            className={`expanding-grid-item bg-blue-700  h-80 2xl:h-96 p-8 rounded-lg flex relative my-5 lg:my-0 ${
+              span4 ? "w-2/3" : "w-1/3"
+            }`}
+            onHoverStart={growGrid4}
+            onHoverEnd={growReset}
+            transition={{ duration: 2 }}
+          >
+            <h3 className="text-4xl xl:text-5xl w-1/2">See all projects</h3>
+            <motion.img
+              src={"/unicornhand.svg"}
+              className={`absolute bottom-0 left-0 right-0 w-32 h-32 mx-auto hidden ${
+                span4 ? "lg:block" : "lg:hidden"
+              }`}
+              transition={{
+                yoyo: Infinity,
+                from: 0,
+                duration: 0.2,
+                ease: "easeInOut",
+                type: "tween",
+              }}
+              whileHover={{ rotate: 20 }}
+            />
+            {/* <img
             className={`absolute bottom-0 left-0 right-0 w-32 h-32 mx-auto hidden ${
               span4 ? "lg:block" : "lg:hidden"
             }`}
             src={"/unicornhand.svg"}
           /> */}
 
-          <Link href="/projects">
-            <BiRightTopArrowCircle size={64} className="absolute right-8 bottom-8 cursor-pointer" />
-          </Link>
-        </motion.div>
-      </motion.section>
+            <Link href="/projects">
+              <BiRightTopArrowCircle
+                size={64}
+                className="absolute right-8 bottom-8 cursor-pointer"
+              />
+            </Link>
+          </motion.div>
+        </div>
+      </div>
       {/* <section className="grid grid-cols-3 grid-rows-3 "></section> */}
-    </PaddingWrapper>
+    </section>
   );
 };
 
