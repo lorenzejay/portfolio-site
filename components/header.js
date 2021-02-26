@@ -90,6 +90,9 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: 768px) {
     display: none;
   }
+  li {
+    margin-right: 10px;
+  }
 `;
 
 // export const NavItem = styled.li`
@@ -128,9 +131,9 @@ const Header = ({ toggle, homePage = false }) => {
         <FaBars className={`${homePage ? "text-black" : "text-black"}`} />
       </MobileIcon>
       <NavMenu
-        className={`flex justify-end ${
+        className={`flex justify-around ${
           homePage ? "text-black" : "text-black"
-        } items-center gap-5 lg:text-xl`}
+        } items-center  lg:text-xl`}
       >
         <li>
           <Link className={`${homePage ? "text-black" : "text-black"}`} href="/">

@@ -1,10 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="mt-24 lg:mt-32 relative  w-full lg:max-h-threeFourths  rounded-lg">
+    <motion.div
+      className="mt-24 lg:mt-32 relative  w-full lg:max-h-threeFourths  rounded-lg"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Image
         src={"/homebg.png"}
         alt="hero"
@@ -35,7 +41,7 @@ const Hero = () => {
           className="rounded-full z-10 object-cover w-64 h-64 lg:w-80 lg:h-80 mb-20"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

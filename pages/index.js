@@ -10,7 +10,7 @@ import ThreeTraits from "../components/threeTraits";
 export default function Home() {
   return (
     <>
-      <InitialTransition />
+      {/* <InitialTransition /> */}
       <Layout homepage={true} className="absolute">
         <Hero imageSrc={"/homebg.png"} />
         <ThreeTraits />

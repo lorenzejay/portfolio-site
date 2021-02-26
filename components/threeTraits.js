@@ -2,7 +2,7 @@ import React from "react";
 
 const ThreeTraits = () => {
   return (
-    <section className="my-24">
+    <section className="mt-24 ">
       <h2 className="text-4xl ">I am a...</h2>
 
       <div className="flex flex-col lg:flex-row gap-3 ">
@@ -10,8 +10,9 @@ const ThreeTraits = () => {
           <img src={"/reading.svg"} className="w-48 h-48" />
           <h3 className="text-2xl  tracking-widest">Reader</h3>
           <p className="text-center mt-10">
-            I love to read and listen to audio books. I love to read books within personal-growth
-            and self-development. My personal favorites are The Power of Habit and Atomic Habits.
+            I love to read and listen to audio books. The genre I read lay within personal-growth
+            and self-development. My personal favorites are "The Power of Habit" and "Atomic
+            Habits".
           </p>
         </div>
 
@@ -20,7 +21,7 @@ const ThreeTraits = () => {
           <h3 className="text-2xl  tracking-widest">Thinker</h3>
           <p className="text-center mt-10">
             I've made it a habit to take a 25 minute walk every morning at 8am. During my walks I
-            listen to an audiobook and just think. I get my creative ideas during this time.
+            just think. Think about my plan for the day as well as develop fun and creative ideas.
           </p>
         </div>
 

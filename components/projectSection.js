@@ -29,9 +29,9 @@ const ProjectSection = () => {
   return (
     <section className="lg:min-h-screen">
       <div className="project-grid flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 text-white lg:gap-3 pt-10">
-        <div className="bg-blue-400 h-80 2xl:h-96 p-8 col-span-1 rounded-lg flex flex-col">
+        <div className="bg-blue-400 h-72 2xl:h-96 p-8 col-span-1 rounded-lg flex flex-col">
           <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Uplift Digital Solutions</h3>
-          <p className="text-sm lg:text-lg 2xl:text-2xl my-3">
+          <p className="text-sm lg:text-base 2xl:text-2xl my-3">
             Freelance Website which aims to help buisness utilize their websites to generate more
             revenue.
           </p>
@@ -40,17 +40,15 @@ const ProjectSection = () => {
           </a>
         </div>
 
-        <div className="bg-red-400 col-span-2 min-h-80 lg:h-80 2xl:h-96 p-8 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
-          <div className="xl:w-1/2">
+        <div className="bg-red-400 col-span-2 min-h-80 lg:h-72 2xl:h-96 p-8 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
+          <div className="xl:w-1/2 relative">
             <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">The Sizzzle</h3>
-            <p className="text-sm lg:text-lg 2xl:text-2xl my-3">
+            <p className="text-sm lg:text-base 2xl:text-2xl my-3">
               Revolutionizing Food Blogging into a simpler and minimalist social media type
               application.
             </p>
-            <p className="text-xs xl:text-lg">
-              Built with Postgresql, React, Node.js, Express, Cloudinary
-            </p>
-            <div className="flex text-xl items-center mt-3">
+
+            <div className="flex text-xl items-center mt-3 lg:absolute lg:bottom-0">
               <a href="https://github.com/lorenzejay/the-sizzzle" target="_blank" className="mr-2">
                 <FaGithub />
               </a>
@@ -70,7 +68,7 @@ const ProjectSection = () => {
 
         <div className="col-span-3 lg:gap-3 w-full flex items-center justify-center">
           <motion.div
-            className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-80 2xl:h-96 p-8 rounded-lg flex flex-col items-center lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out ${
+            className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-72 2xl:h-96 p-8 rounded-lg flex flex-col items-center lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out ${
               span3 ? "w-2/3" : "w-1/3"
             }`}
             transition={{ duration: 2 }}
@@ -78,12 +76,12 @@ const ProjectSection = () => {
           >
             <div>
               <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">Photographer Preset Shop</h3>
-              <p className="text-sm lg:text-lg 2xl:text-2xl my-3 ">
+              <p className="text-sm lg:text-base 2xl:text-2xl my-3 ">
                 Created a site that generate $800 of passive income selling digital custom digital
                 presets.
               </p>
-              <p className="text-xs xl:text-lg">Built with Gatsby.js.</p>
-              <div className="flex text-xl items-center mt-3">
+
+              <div className="flex text-xl items-center mt-3 ">
                 <a
                   href="https://github.com/lorenzejay/the-sizzzle"
                   target="_blank"
@@ -107,14 +105,14 @@ const ProjectSection = () => {
           </motion.div>
 
           <motion.div
-            className={`expanding-grid-item bg-blue-700  h-80 2xl:h-96 p-8 rounded-lg flex relative my-5 lg:my-0 ${
+            className={`expanding-grid-item bg-blue-700  h-72 2xl:h-96 p-8 rounded-lg flex relative my-5 lg:my-0 ${
               span4 ? "w-2/3" : "w-1/3"
             }`}
             onHoverStart={growGrid4}
             onHoverEnd={growReset}
             transition={{ duration: 2 }}
           >
-            <h3 className="text-4xl xl:text-5xl w-1/2">See all projects</h3>
+            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">See all projects</h3>
             <motion.img
               src={"/unicornhand.svg"}
               className={`absolute bottom-0 left-0 right-0 w-32 h-32 mx-auto hidden ${
