@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 export const SidebarContainer = styled.aside`
   position: fixed;
-  z-index: 999;
+  z-index: 19;
   width: 100%;
   height: 100%;
   background: black;
@@ -23,8 +23,8 @@ export const CloseIcon = styled(FaTimes)`
 
 export const Icon = styled.div`
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
+  top: 2rem;
+  right: 1rem;
   background: transparent;
   font-size: 2rem;
   cursor: pointer;
@@ -70,37 +70,50 @@ export const SidebarLink = styled(Link)`
   }
 `;
 
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(30px at 40px 40px)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
 const SideBar = ({ isOpen, toggle }) => {
   return (
+    // <motion.div animate={isOpen ? "open" : "closed"} variants={variants} className="z-20">
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon>
         <CloseIcon />
       </Icon>
 
-      <SidebarWrapper>
-        <SideBarMenu>
-          {/* <span className="darkmode-btn">
-            {theme === "dark" ? (
-              <FaLightbulb onClick={themeToggler} className="icon" style={{ color: "#fff" }} />
-            ) : (
-              <FaRegLightbulb onClick={themeToggler} className="icon" style={{ color: "#fff" }} />
-            )}
-          </span> */}
-          <li>
-            <SidebarLink href="/">Home</SidebarLink>
-          </li>
-          <li>
-            <SidebarLink href="/about">About</SidebarLink>
-          </li>
-          <li>
-            <SidebarLink href="/contact-us">Contact</SidebarLink>
-          </li>
-          <li>
-            <SidebarLink href="/blog">Blog</SidebarLink>
-          </li>
-        </SideBarMenu>
-      </SidebarWrapper>
+      <SideBarMenu className="text-white">
+        <li>
+          <SidebarLink href="/">Home</SidebarLink>
+        </li>
+        <li>
+          <SidebarLink href="/about">About</SidebarLink>
+        </li>
+        <li>
+          <SidebarLink href="/contact-us">Contact</SidebarLink>
+        </li>
+        <li>
+          <SidebarLink href="/blog">Blog</SidebarLink>
+        </li>
+      </SideBarMenu>
     </SidebarContainer>
+    // </motion.div>
   );
 };
 

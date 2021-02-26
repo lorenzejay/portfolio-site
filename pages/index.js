@@ -3,26 +3,24 @@ import About from "../components/about";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
 import ProjectSection from "../components/projectSection";
-import { motion } from "framer-motion";
 import styles from "../styles/Home.module.css";
+import InitialTransition from "../components/intialTransition";
+import ThreeTraits from "../components/threeTraits";
 
 export default function Home() {
   return (
-    <motion.div exit={{ opacity: 0 }}>
-      <Layout homepage={true}>
+    <>
+      <InitialTransition />
+      <Layout homepage={true} className="absolute">
         <Hero imageSrc={"/homebg.png"} />
+        <ThreeTraits />
         <About />
         <ProjectSection />
+
         <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-          </a>
+          <h2 className="font-bold">By Lorenze Hernandez</h2>
         </footer>
       </Layout>
-    </motion.div>
+    </>
   );
 }

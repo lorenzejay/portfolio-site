@@ -31,8 +31,15 @@ a {
 }
 
 .project-grid {
-  transition: all 1s;
+  transition: all 1s ease-in-out;
 }
 
-.project-grid:hover {
+.expanding-grid-item {
+  transition: all 0.5s ease-in-out;
+}
+
+.square {
+  width: 48px;
+  height: 48px;
+  background: black;
 }

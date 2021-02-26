@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
+import { motion } from "framer-motion";
 // export const Nav = styled.header`
 //   //handle transitions here
 //   /* background: #fff; */
@@ -65,7 +66,7 @@ import { FaBars } from "react-icons/fa";
 
 export const MobileIcon = styled.div`
   display: none;
-  /* color: #fff; */
+  color: #000;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -111,34 +112,38 @@ export const NavMenu = styled.ul`
 // `;
 
 const Header = ({ toggle, homePage = false }) => {
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
   return (
     <header
       className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 absolute bg-transparent ${
-        homePage ? "text-white" : "text-black"
+        homePage ? "text-black" : "text-black"
       }`}
-      style={{ height: "10vh" }}
+      style={{ height: "14vh" }}
     >
       <h1 className="text-3xl font-bold uppercase">Lorenze H.</h1>
       <MobileIcon onClick={toggle} className="block lg:hidden">
-        <FaBars className={`${homePage ? "text-white" : "text-black"}`} />
+        <FaBars className={`${homePage ? "text-black" : "text-black"}`} />
       </MobileIcon>
       <NavMenu
         className={`flex justify-end ${
-          homePage ? "text-white" : "text-black"
+          homePage ? "text-black" : "text-black"
         } items-center gap-5 lg:text-xl`}
       >
         <li>
-          <Link className={`${homePage ? "text-white" : "text-black"}`} href="/">
+          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/">
             Home
           </Link>
         </li>
         <li>
-          <Link className={`${homePage ? "text-white" : "text-black"}`} href="/about">
+          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/about">
             About
           </Link>
         </li>
         <li>
-          <Link className={`${homePage ? "text-white" : "text-black"}`} href="/projects">
+          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/projects">
             Projects
           </Link>
         </li>
