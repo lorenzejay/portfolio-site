@@ -13,10 +13,10 @@ const Contact = () => {
       <section className="min-h-screen">
         <InitialTransition />
         <PageBanners title="Have an idea?" className="bg-red-300" />
-        <h2 className="lg:text-3xl font-bold w-full text-center rounded-md my-10">
+        <h2 className="text-2xl font-thin lg:text-3xl lg:font-bold w-full text-center rounded-md my-10">
           Let's see if we're the right fit together.
         </h2>
-        <form className="flex flex-col mx-auto items-center justify-center w-1/2 gap-3 relative mt-10">
+        <form className="flex flex-col mx-auto items-center justify-center w-full lg:w-1/2 gap-3 relative mt-10">
           <input
             placeholder="name"
             value={name}
@@ -40,9 +40,9 @@ const Contact = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className="w-full border-b-2  border-black border-opacity-10 px-3 py-1"
-            cols="30"
+            rows="5"
           ></textarea>
-          <button type="submit" className="bg-black text-white px-5 py-1 w-full">
+          <button type="submit" className="bg-black text-white px-5 py-2 w-full">
             Submit
           </button>
         </form>

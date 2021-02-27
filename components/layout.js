@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./footer";
 import Header from "./header";
 import PaddingWrapper from "./paddingWrapper";
 import SideBar from "./sidebar";
@@ -19,6 +20,7 @@ const Layout = ({ children, homepage, className }) => {
       <SideBar toggle={toggle} isOpen={isOpen} />
       <Header toggle={toggle} homePage={homepage} />
       <PaddingWrapper className={className}>{children}</PaddingWrapper>
+      <Footer />
     </>
   );
 };

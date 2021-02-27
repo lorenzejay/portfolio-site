@@ -3,9 +3,8 @@ import About from "../components/about";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
 import ProjectSection from "../components/projectSection";
-import styles from "../styles/Home.module.css";
-import InitialTransition from "../components/intialTransition";
 import ThreeTraits from "../components/threeTraits";
+import TechIUse from "../components/techIUse";
 
 export default function Home() {
   return (
@@ -15,11 +14,8 @@ export default function Home() {
         <Hero imageSrc={"/homebg.png"} />
         <ThreeTraits />
         <About />
+        <TechIUse />
         <ProjectSection />
-
-        <footer className={styles.footer}>
-          <h2 className="font-bold">By Lorenze Hernandez</h2>
-        </footer>
       </Layout>
     </>
   );

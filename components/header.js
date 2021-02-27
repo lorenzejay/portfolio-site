@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 export const MobileIcon = styled.div`
   display: none;
@@ -16,6 +15,7 @@ export const MobileIcon = styled.div`
 `;
 export const NavMenu = styled.ul`
   display: flex;
+  justify-content: space-around;
   list-style: none;
   text-align: center;
   margin-right: 22px;
@@ -37,7 +37,7 @@ export const NavMenu = styled.ul`
 const Header = ({ toggle, homePage = false }) => {
   return (
     <header
-      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 absolute bg-transparent ${
+      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 relative bg-transparent ${
         homePage ? "text-black" : "text-black"
       }`}
       style={{ height: "14vh" }}

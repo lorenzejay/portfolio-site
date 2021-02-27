@@ -31,7 +31,7 @@ const ProjectSection = () => {
       <div className="project-grid flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 text-white lg:gap-3 pt-10">
         <div className="bg-blue-400 h-72 2xl:h-96 p-8 col-span-1 rounded-lg flex flex-col">
           <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Uplift Digital Solutions</h3>
-          <p className="text-sm lg:text-base 2xl:text-2xl my-3">
+          <p className="text-lg lg:text-base 2xl:text-2xl my-3">
             Freelance Website which aims to help buisness utilize their websites to generate more
             revenue.
           </p>
@@ -43,7 +43,7 @@ const ProjectSection = () => {
         <div className="bg-red-400 col-span-2 min-h-80 lg:h-72 2xl:h-96 p-8 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
           <div className="xl:w-1/2 relative">
             <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">The Sizzzle</h3>
-            <p className="text-sm lg:text-base 2xl:text-2xl my-3">
+            <p className="text-lg lg:text-base 2xl:text-2xl my-3">
               Revolutionizing Food Blogging into a simpler and minimalist social media type
               application.
             </p>
@@ -76,7 +76,7 @@ const ProjectSection = () => {
           >
             <div>
               <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">Photographer Preset Shop</h3>
-              <p className="text-sm lg:text-base 2xl:text-2xl my-3 ">
+              <p className="text-lg lg:text-base 2xl:text-2xl my-3 ">
                 Created a site that generate $800 of passive income selling digital custom digital
                 presets.
               </p>

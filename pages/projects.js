@@ -5,7 +5,7 @@ import InitialTransition from "../components/intialTransition";
 const Projects = () => {
   return (
     <Layout className="absolute w-full">
-      <div>
+      <div className="min-h-screen">
         <InitialTransition />
         <PageBanners title={"Projects"} />
       </div>
