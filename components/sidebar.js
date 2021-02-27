@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
-import { motion } from "framer-motion";
 export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 19;
@@ -45,50 +44,27 @@ export const SideBarMenu = styled.ul`
     margin-bottom: 15px;
   }
   li {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    margin: 10px 0;
     &:hover {
-      color: green;
+      color: #ea5454;
       transition: 0.2s ease-in-out;
     }
   }
 `;
 
 export const SidebarLink = styled(Link)`
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 5vh;
-  &:hover {
-    color: green;
-    transition: 0.2s ease-in-out;
-  }
+  margin-bottom: 5vh; */
 `;
-
-const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: "circle(30px at 40px 40px)",
-    transition: {
-      delay: 0.5,
-      type: "spring",
-      stiffness: 400,
-      damping: 40,
-    },
-  },
-};
 
 const SideBar = ({ isOpen, toggle }) => {
   return (
@@ -106,7 +82,7 @@ const SideBar = ({ isOpen, toggle }) => {
           <SidebarLink href="/about">About</SidebarLink>
         </li>
         <li>
-          <SidebarLink href="/contact-us">Contact</SidebarLink>
+          <SidebarLink href="/contact">Contact</SidebarLink>
         </li>
         <li>
           <SidebarLink href="/blog">Blog</SidebarLink>
