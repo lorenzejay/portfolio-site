@@ -47,8 +47,6 @@ const Projects = ({ projects }) => {
   );
 };
 
-export default Projects;
-
 export async function getStaticProps() {
   const projects = await Client().query(Prismic.Predicates.at("document.type", "projects_gallery"));
 
@@ -56,5 +54,7 @@ export async function getStaticProps() {
     props: {
       projects,
     },
+    revalidate: 1,
   };
 }
+export default Projects;
