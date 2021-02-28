@@ -47,14 +47,13 @@ const Projects = ({ projects }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const projects = await Client().query(Prismic.Predicates.at("document.type", "projects_gallery"));
 
   return {
     props: {
       projects,
     },
-    revalidate: 1,
   };
 }
 export default Projects;
