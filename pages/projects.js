@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 import PageBanners from "../components/pageBanners";
 import InitialTransition from "../components/intialTransition";
-import { Client } from "../prismic-configuration";
+import { Client } from "../prismic-configuration.js";
 import Prismic from "prismic-javascript";
 import { RichText } from "prismic-reactjs";
 
