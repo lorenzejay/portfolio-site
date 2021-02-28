@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <motion.div
+    <motion.main
       className=" relative  w-full lg:max-h-threeFourths  rounded-lg"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
@@ -41,7 +41,7 @@ const Hero = () => {
           className="rounded-full z-10 object-cover w-64 h-64 lg:w-80 lg:h-80 mb-20"
         />
       </div>
-    </motion.div>
+    </motion.main>
   );
 };
 

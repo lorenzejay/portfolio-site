@@ -12,6 +12,7 @@ export default function Home() {
       {/* <InitialTransition /> */}
       <Layout homepage={true} className="absolute">
         <Hero imageSrc={"/homebg.png"} />
+
         <ThreeTraits />
         <About />
         <TechIUse />
