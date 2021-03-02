@@ -36,9 +36,9 @@ const Hero = () => {
           </span>
         </article>
         <img
-          src={"/ljpp.jpg"}
-          alt="this is a portrait of the author"
-          className="rounded-full z-10 object-cover  w-64 h-64 2xl:w-80 2xl:h-80 mb-5 lg:mb-20"
+          src={"/dev.jpg"}
+          alt="vector image art of a web developer"
+          className="rounded-full z-10 object-cover  w-64 h-64 md:w-56 md:h-56 2xl:w-80 2xl:h-80 mb-10 sm:mt-10 lg:mb-20"
         />
       </div>
     </motion.main>

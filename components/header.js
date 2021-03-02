@@ -20,6 +20,7 @@ export const NavMenu = styled.ul`
   text-align: center;
   margin-right: 22px;
   margin-top: auto;
+
   height: 100%;
   .darkmode-btn {
     display: flex;
@@ -30,39 +31,33 @@ export const NavMenu = styled.ul`
     display: none;
   }
   li {
-    margin-right: 10px;
+    margin-right: 15px;
   }
 `;
 
-const Header = ({ toggle, homePage = false }) => {
+const Header = ({ toggle }) => {
   return (
     <header
-      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 relative bg-transparent ${
-        homePage ? "text-black" : "text-black"
-      }`}
+      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 relative bg-transparent text-black`}
       style={{ height: "14vh" }}
     >
       <h1 className="text-3xl font-bold uppercase">Lorenze H.</h1>
       <MobileIcon onClick={toggle} className="block lg:hidden">
-        <FaBars className={`${homePage ? "text-black" : "text-black"}`} />
+        <FaBars className="text-black" />
       </MobileIcon>
-      <NavMenu
-        className={`flex justify-around ${
-          homePage ? "text-black" : "text-black"
-        } items-center  lg:text-xl`}
-      >
+      <NavMenu className={"flex justify-around text-black items-center  text-lg lg:text-xl"}>
         <li>
-          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/">
+          <Link className={""} href="/">
             Home
           </Link>
         </li>
         <li>
-          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/contact">
+          <Link className={""} href="/contact">
             Contact
           </Link>
         </li>
         <li>
-          <Link className={`${homePage ? "text-black" : "text-black"}`} href="/projects">
+          <Link className={""} href="/projects">
             Projects
           </Link>
         </li>
