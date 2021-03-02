@@ -84,9 +84,9 @@ const SideBar = ({ isOpen, toggle }) => {
         <li>
           <SidebarLink href="/contact">Contact</SidebarLink>
         </li>
-        <li>
+        {/* <li>
           <SidebarLink href="/blog">Blog</SidebarLink>
-        </li>
+        </li> */}
       </SideBarMenu>
     </SidebarContainer>
     // </motion.div>

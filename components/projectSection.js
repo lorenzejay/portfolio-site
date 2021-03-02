@@ -97,6 +97,7 @@ const ProjectSection = () => {
             {
               <img
                 src={"/project1mockup.png"}
+                alt="image of my project thumnail"
                 className={`object-cover h-80 lg:h-64 lg:mx-0 ${span4 ? "lg:hidden" : "lg:block"}`}
               />
             }
@@ -112,6 +113,7 @@ const ProjectSection = () => {
           >
             <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">See all projects</h3>
             <motion.img
+              alt="a waving hand"
               src={"/unicornhand.svg"}
               className={`absolute bottom-0 left-0 right-0 w-32 h-32 mx-auto hidden ${
                 span4 ? "lg:block" : "lg:hidden"

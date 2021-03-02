@@ -20,7 +20,7 @@ const Hero = () => {
       <span className="overlay z-1 rounded-3xl"></span>
       <div className="px-10 lg:pt-20 xl:px-20 flex flex-col items-center justify-center h-full z-10 text-white  md:flex-row md:justify-between">
         <article className="z-10 mb-14 mt-24 lg:mt-0">
-          <p className="text-5xl lg:text-6xl mb-5">
+          <p className="text-5xl mb-5">
             Lorenze Hernandez<span>👋</span>
           </p>
           <h1 className="text-2xl text-white z-3 mb-10 lg:text-3xl  py-2 lg:w-full w-11/12">
@@ -38,7 +38,7 @@ const Hero = () => {
         <img
           src={"/ljpp.jpg"}
           alt="this is a portrait of the author"
-          className="rounded-full z-10 object-cover w-64 h-64 lg:w-80 lg:h-80 mb-20"
+          className="rounded-full z-10 object-cover  w-64 h-64 2xl:w-80 2xl:h-80 mb-5 lg:mb-20"
         />
       </div>
     </motion.main>

@@ -1,7 +1,11 @@
 const About = () => {
   return (
     <section className=" flex flex-col-reverse md:flex-row items-center justify-between gap-4 xl:gap-10 h-auto my-52">
-      <img src={"/webdev.svg"} className="w-3/4 lg:w-1/2" />
+      <img
+        src={"/webdev.svg"}
+        alt="guy on laptop with github squares behind"
+        className="w-3/4 lg:w-1/2"
+      />
       <div className="flex flex-col mb-5 items-start">
         <h2 className="text-3xl xl:text-5xl">
           <span className="text-red-400">Specialist</span> in creative digital products.

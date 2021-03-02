@@ -6,8 +6,8 @@ const ThreeTraits = () => {
       <h2 className="text-4xl ">I am a...</h2>
 
       <div className="flex flex-col lg:flex-row gap-3 ">
-        <div className="flex flex-col items-center">
-          <img src={"/reading.svg"} className="w-48 h-48" />
+        <div className="flex flex-col items-center mt-4">
+          <img src={"/reading.svg"} alt="thumnail of my character traits" className="w-48 h-48" />
           <h3 className="text-2xl  tracking-widest">Reader</h3>
           <p className="text-center mt-10">
             I love to read and listen to audio books. The genre I read lay within personal-growth
@@ -16,8 +16,8 @@ const ThreeTraits = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center">
-          <img src={"/lightbulb.svg"} className="w-48 h-48" />
+        <div className="flex flex-col items-center mt-4">
+          <img src={"/lightbulb.svg"} alt="thumnail of my character traits" className="w-48 h-48" />
           <h3 className="text-2xl  tracking-widest">Thinker</h3>
           <p className="text-center mt-10">
             I've made it a habit to take a 25 minute walk every morning at 8am. During my walks I
@@ -25,8 +25,8 @@ const ThreeTraits = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center">
-          <img src={"/thinking.svg"} className="w-48 h-48" />
+        <div className="flex flex-col items-center mt-4">
+          <img src={"/thinking.svg"} alt="thumnail of my character traits" className="w-48 h-48" />
           <h3 className="text-2xl tracking-widest">Creative</h3>
           <p className="text-center mt-10">
             I love to implement my creative nature in anything I do. Being able to think outside the

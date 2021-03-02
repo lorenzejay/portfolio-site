@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { useState } from "react";
 import InitialTransition from "../components/intialTransition";
 import Layout from "../components/layout";
@@ -10,6 +11,14 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   return (
     <>
+      <Head>
+        <title>Contact Me</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Contact me if you have any questions, ideas, or to simply collaborate."
+        />
+      </Head>
       <InitialTransition />
       <Layout className="absolute w-full">
         <section className="min-h-screen">
@@ -43,7 +52,7 @@ const Contact = () => {
               className="w-full border-b-2  border-black border-opacity-10 px-3 py-1 mt-2 rounded-none"
               rows="5"
             ></textarea>
-            <button type="submit" className="bg-black text-white px-5 py-2 mt-4 w-full">
+            <button type="submit" className="bg-black text-white px-5 py-2 mt-4 w-full mb-10">
               Submit
             </button>
           </form>
