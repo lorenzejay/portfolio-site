@@ -29,10 +29,10 @@ const ProjectSection = () => {
   return (
     <section className="lg:min-h-screen">
       <div className="project-grid flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 text-white lg:gap-3 pt-10">
-        <div className="bg-blue-400 h-72 2xl:h-96 p-8 col-span-1 rounded-lg flex flex-col">
+        <div className="bg-blue-400 h-72 2xl:h-96 p-4 col-span-1 rounded-lg flex flex-col">
           <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Uplift Digital Solutions</h3>
           <p className="text-lg lg:text-base 2xl:text-2xl my-3">
-            Freelance Website which aims to help buisness utilize their websites to generate more
+            Freelance Website which aims to help businesses utilize their website to generate more
             revenue.
           </p>
           <a href="https://upliftdigitalsolutions.com/" target="_blank" className="underline ">
@@ -40,7 +40,7 @@ const ProjectSection = () => {
           </a>
         </div>
 
-        <div className="bg-red-400 col-span-2 min-h-80 lg:h-72 2xl:h-96 p-8 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
+        <div className="bg-red-400 col-span-2 min-h-80 lg:h-72 2xl:h-96 p-4 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
           <div className="xl:w-1/2 relative">
             <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">The Sizzzle</h3>
             <p className="text-lg lg:text-base 2xl:text-2xl my-3">
@@ -58,7 +58,7 @@ const ProjectSection = () => {
             </div>
           </div>
           <iframe
-            className="w-full h-72 lg:w-1/2 lg:h-52 2xl:h-72 pt-14"
+            className="w-full md:h-72 lg:w-1/2 lg:h-52 2xl:h-72 pt-14"
             src="https://www.youtube.com/embed/yH-b5kJo_mY"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -68,7 +68,7 @@ const ProjectSection = () => {
 
         <div className="col-span-3 w-full flex flex-col lg:flex-row items-center justify-center">
           <motion.div
-            className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-72 2xl:h-96 p-8 rounded-lg flex flex-col items-center lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out lg:mr-3 ${
+            className={`expanding-grid-item bg-purple-700  min-h-80 lg:h-72 2xl:h-96 p-4 rounded-lg flex flex-col items-center lg:flex-row my-5 lg:my-0 transition-all 0.5s ease-in-out lg:mr-3 ${
               span3 ? "lg:w-2/3" : "lg:w-1/3"
             }`}
             transition={{ duration: 2 }}
@@ -77,8 +77,8 @@ const ProjectSection = () => {
             <div>
               <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">Photographer Preset Shop</h3>
               <p className="text-lg lg:text-base 2xl:text-2xl my-3 ">
-                Created a site that generate $800 of passive income selling digital custom digital
-                presets.
+                A site that generated over $900 of passive income selling digital presets during the
+                first 3 months since it went live.
               </p>
 
               <div className="flex text-xl items-center mt-3 ">
@@ -98,13 +98,15 @@ const ProjectSection = () => {
               <img
                 src={"/project1mockup.png"}
                 alt="image of my project thumnail"
-                className={`object-cover h-80 lg:h-64 lg:mx-0 ${span4 ? "lg:hidden" : "lg:block"}`}
+                className={`object-cover w-full sm:h-80  lg:h-64 lg:mx-0 ${
+                  span4 ? "lg:hidden" : "lg:block"
+                }`}
               />
             }
           </motion.div>
 
           <motion.div
-            className={`expanding-grid-item w-full bg-blue-700  h-72 2xl:h-96 p-8 rounded-lg flex relative my-5 lg:my-0 ${
+            className={`expanding-grid-item w-full bg-blue-700  h-72 2xl:h-96 p-4 rounded-lg flex relative my-5 lg:my-0 ${
               span4 ? "lg:w-2/3" : "lg:w-1/3"
             }`}
             onHoverStart={growGrid4}
