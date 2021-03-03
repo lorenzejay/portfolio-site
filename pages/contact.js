@@ -3,12 +3,76 @@ import React, { useState } from "react";
 import InitialTransition from "../components/intialTransition";
 import Layout from "../components/layout";
 import PageBanners from "../components/pageBanners";
+import axios from "axios";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [message, setMessage] = useState("");
+  const todayDate = new Date().toISOString().slice(0, 10);
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  });
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    date: todayDate,
+    message: "",
+  });
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      });
+      setInputs({
+        name: "",
+        email: "",
+        phoneNumber: "",
+        date: todayDate,
+        message: "",
+      });
+    } else {
+      setStatus({
+        info: { error: true, msg: msg },
+      });
+    }
+  };
+
+  const handleChange = (e) => {
+    e.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    });
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+    axios({
+      method: "POST",
+      url: "https://formspree.io/f/xyybqojo",
+      data: inputs,
+    })
+      .then((response) => {
+        handleServerResponse(true, "Thank you for submitting. We will get back to you soon.");
+      })
+      .catch((error) => {
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
+
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phoneNumber, setPhoneNumber] = useState("");
+  // const [message, setMessage] = useState("");
   return (
     <>
       <Head>
@@ -26,35 +90,52 @@ const Contact = () => {
           <h2 className="text-2xl font-thin lg:text-3xl lg:font-bold w-full text-center rounded-md my-10">
             Let's see if we're the right fit together.
           </h2>
-          <form className="flex flex-col mx-auto items-center justify-center w-full lg:w-1/2 gap-3 relative mt-10">
+          <form
+            className="flex flex-col mx-auto items-center justify-center w-full lg:w-1/2 gap-3 relative mt-10"
+            onSubmit={handleOnSubmit}
+          >
             <input
               placeholder="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={inputs.name}
+              name="name"
+              id="name"
+              onChange={handleChange}
               className="w-full border-b-2 border-black border-opacity-10 px-3 py-1 mt-2 rounded-none"
             />
             <input
               placeholder="phone number"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              value={inputs.phoneNumber}
+              id="phoneNumber"
+              name="phoneNumber"
+              onChange={handleChange}
               className="w-full border-b-2 border-black  border-opacity-10 px-3 py-1 mt-2 rounded-none"
             />
             <input
               placeholder="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={inputs.email}
+              name="email"
+              id="email"
+              onChange={handleChange}
               className="w-full border-b-2  border-black border-opacity-10 px-3 py-1 mt-2 rounded-none"
             />
             <textarea
               placeholder="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              name="message"
+              id="message"
+              value={inputs.message}
+              onChange={handleChange}
               className="w-full border-b-2  border-black border-opacity-10 px-3 py-1 mt-2 rounded-none"
               rows="5"
             ></textarea>
             <button type="submit" className="bg-black text-white px-5 py-2 mt-4 w-full mb-10">
-              Submit
+              {!status.submitting ? (!status.submitted ? "Submit" : "Submitted") : "Submitting..."}
             </button>
+            {status.info.error && (
+              <div className="error text-red-500 mb-10">Error: {status.info.msg}</div>
+            )}
+            {!status.info.error && status.info.msg && (
+              <p className="text-green-500 mb-10">{status.info.msg}</p>
+            )}
           </form>
         </section>
       </Layout>
