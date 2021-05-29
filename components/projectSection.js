@@ -98,7 +98,7 @@ const ProjectSection = () => {
               <img
                 src={"/project1mockup.png"}
                 alt="image of my project thumnail"
-                className={`object-cover w-full sm:h-80  lg:h-64 lg:mx-0 ${
+                className={`object-cover w-96 md:w-64  lg:h-64 lg:mx-0 ${
                   span4 ? "lg:hidden" : "lg:block"
                 }`}
               />
