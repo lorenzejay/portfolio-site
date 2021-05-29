@@ -41,24 +41,27 @@ const Header = ({ toggle }) => {
       className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-44 relative bg-transparent text-black`}
       style={{ height: "14vh" }}
     >
-      <h1 className="text-3xl font-bold uppercase">Lorenze H.</h1>
+      <h1 className="text-3xl font-bold uppercase">Lorenze Jay</h1>
       <MobileIcon onClick={toggle} className="block lg:hidden">
         <FaBars className="text-black" />
       </MobileIcon>
       <NavMenu className={"flex justify-around text-black items-center  text-lg lg:text-xl"}>
-        <li>
+        <li className="hover:border-b-2 border-red-300 ">
           <Link className={""} href="/">
             Home
           </Link>
         </li>
-        <li>
-          <Link className={""} href="/contact">
-            Contact
-          </Link>
+        <li className="hover:border-b-2 border-red-300 ">
+          <Link href="/about">About</Link>
         </li>
-        <li>
+        <li className="hover:border-b-2 border-red-300 ">
           <Link className={""} href="/projects">
             Projects
+          </Link>
+        </li>
+        <li className="hover:border-b-2 border-red-300 ">
+          <Link className={""} href="/contact">
+            Contact
           </Link>
         </li>
       </NavMenu>

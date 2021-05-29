@@ -18,6 +18,7 @@ module.exports = {
     gridColumn: ["responsive", "hover"],
     gridColumnStart: ["responsive", "hover"],
     gridColumnEnd: ["responsive", "hover"],
+    borderWidth: ["hover", "focus"],
   },
   plugins: [],
 };
