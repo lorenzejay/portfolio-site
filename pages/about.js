@@ -42,14 +42,14 @@ const About = () => {
               <p className="my-3 text-xl">
                 I love building full applications because I get the full experience of how an entire
                 application works. Being an artist I love creating the front-end. At the same time,
-                I believe to have a great frontend, it is important to understand how the backend
-                works as well. The backend is where our application can communicate with servers and
-                databases as well as where most of our logic / algorithsms live. Developing an
+                I believe to have a great frontend, it's important to understand how the backend
+                works. The backend is where our application can communicate with servers and
+                databases as well as where most of our logic / algorithms live. Developing an
                 application from front to back lets me build things we commonly use on a day to day
-                basis - like notion, trello, or any social media.{" "}
+                basis - like productivity, blogs, or social media applications.
               </p>
               <p className="my-3 text-xl">
-                My main focus is building accessible, inclusive products and digital experiences for
+                My main focus is to build accessible, inclusive products and digital experiences for
                 a variety of clients.
               </p>
             </div>
