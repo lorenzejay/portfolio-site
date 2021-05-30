@@ -23,7 +23,7 @@ const Hero = () => {
           <p className="text-5xl mb-5">
             Lorenze Hernandez<span>👋</span>
           </p>
-          <h1 className="text-2xl text-white z-3 mb-10 lg:text-3xl  py-2 lg:w-full w-11/12">
+          <h1 className="text-2xl text-white z-3 mb-10 lg:text-3xl  py-2  md:w-3/4 lg:w-1/2 w-11/12">
             A web developer from Los Angeles. I build accessible, inclusive products and digital
             experiences for a variety of clients.
           </h1>
@@ -39,7 +39,7 @@ const Hero = () => {
         <img
           src={"/ljpp.jpg"}
           alt="portrait of lorenze hernandez."
-          className="rounded-full z-10 object-cover  w-64 h-64 md:w-56 md:h-56 2xl:w-80 2xl:h-80 mb-10 sm:mt-10 lg:mb-20"
+          className="rounded-full z-10 object-cover  w-64 h-64 md:rounded-md md:w-72 md:h-72 lg:w-3/4 lg:h-80 xl:w-1/4 xl:h-96 2xl:h-96  mb-10 sm:mt-10 lg:mb-20 "
         />
       </div>
     </motion.main>
