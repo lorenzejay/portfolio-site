@@ -96,7 +96,7 @@ const ProjectSection = () => {
             </div>
             {
               <img
-                src={"/project1mockup.png"}
+                src={"/charis-presets-mockup-min.png"}
                 alt="image of my project thumnail"
                 className={`object-cover w-96 md:w-64  lg:h-64 lg:mx-0 ${
                   span4 ? "lg:hidden" : "lg:block"
