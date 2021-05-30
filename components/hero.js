@@ -24,7 +24,8 @@ const Hero = () => {
             Lorenze Hernandez<span>👋</span>
           </p>
           <h1 className="text-2xl text-white z-3 mb-10 lg:text-3xl  py-2 lg:w-full w-11/12">
-            Web Developer from Los Angeles.
+            A web developer from Los Angeles. I build accessible, inclusive products and digital
+            experiences for a variety of clients.
           </h1>
           <span className="flex text-3xl">
             <a href="https://github.com/lorenzejay" target="_blank">
