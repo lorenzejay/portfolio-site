@@ -28,16 +28,16 @@ const Hero = () => {
           </h1>
           <span className="flex text-3xl">
             <a href="https://github.com/lorenzejay" target="_blank">
-              <FaGithub className="mr-3 rounded-full hover:text-yellow-500" />
+              <FaGithub className="mr-3 rounded-full hover:text-gray-600" />
             </a>
             <a href="https://www.linkedin.com/in/lorenzehernandez/" target="_blank">
-              <FaLinkedin className="hover:text-yellow-500" />
+              <FaLinkedin className="hover:text-blue-500" />
             </a>
           </span>
         </article>
         <img
-          src={"/dev.jpg"}
-          alt="vector image art of a web developer"
+          src={"/ljpp.jpg"}
+          alt="portrait of lorenze hernandez."
           className="rounded-full z-10 object-cover  w-64 h-64 md:w-56 md:h-56 2xl:w-80 2xl:h-80 mb-10 sm:mt-10 lg:mb-20"
         />
       </div>
