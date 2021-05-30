@@ -43,7 +43,7 @@ const Hero = () => {
         <img
           src={"/ljpp.jpg"}
           alt="portrait of lorenze hernandez."
-          className="rounded-full z-10 object-cover  w-64 h-64 md:rounded-md md:w-72 md:h-72 lg:w-3/4 lg:h-80 xl:w-1/4 xl:h-96 2xl:h-96  mb-10 sm:mt-10 lg:mb-20 "
+          className="rounded-full z-10 object-cover  w-64 h-64 md:rounded-md md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:h-96  mb-10 sm:mt-10 lg:mb-20 "
         />
       </div>
     </motion.main>
