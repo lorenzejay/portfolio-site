@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 const Hero = () => {
   return (
     <motion.main
@@ -27,18 +26,11 @@ const Hero = () => {
             A web developer from Los Angeles. I build accessible, inclusive products and digital
             experiences for a variety of clients.
           </h1>
-          <span className="flex text-3xl">
-            <a href="https://github.com/lorenzejay" target="_blank" rel="noreferrer">
-              <FaGithub className="mr-3 rounded-full hover:text-gray-600" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/lorenzehernandez/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedin className="hover:text-blue-500" />
-            </a>
-          </span>
+          <Link href="/projects">
+            <button className="text-white bg-blue-400 px-4 py-2 rounded-md cursor-pointer focus:outline-none">
+              See Projects
+            </button>
+          </Link>
         </article>
         <img
           src={"/ljpp.jpg"}
