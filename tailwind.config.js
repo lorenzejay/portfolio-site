@@ -12,6 +12,14 @@ module.exports = {
         threeFourths: "75vh",
         full: "100%",
       },
+      minHeight: {
+        0: "0",
+        "1/4": "25vh",
+        "1/2": "50vh",
+        "3/4": "75vh",
+        full: "100%",
+        screen: "100vh",
+      },
     },
   },
   variants: {
