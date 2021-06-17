@@ -35,10 +35,6 @@ export const SidebarWrapper = styled.div`
 `;
 
 export const SideBarMenu = styled.ul`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: white;
   .darkmode-btn {
     cursor: pointer;
     margin-bottom: 15px;
@@ -79,7 +75,7 @@ const SideBar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
 
-      <SideBarMenu className="text-white text-3xl pt-36">
+      <SideBarMenu className="text-white text-3xl flex flex-col justify-center items-center">
         <li>
           <SidebarLink href="/">Home</SidebarLink>
         </li>
