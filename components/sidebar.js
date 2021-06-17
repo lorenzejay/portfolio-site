@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
-export const SidebarContainer = styled.aside`
+export const SidebarContainer = styled.div`
   position: fixed;
   z-index: 19;
   width: 100%;
@@ -69,12 +69,17 @@ export const SidebarLink = styled(Link)`
 const SideBar = ({ isOpen, toggle }) => {
   return (
     // <motion.div animate={isOpen ? "open" : "closed"} variants={variants} className="z-20">
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <div
+      className={`fixed w-screen h-screen z-50 bg-black grid justify-center top-0 left-0 transition-all ease-in-out duration-500 ${
+        isOpen ? "opacity-100" : "opacity-0"
+      } ${isOpen ? "top-0" : "-top-full"} `}
+      onClick={toggle}
+    >
       <Icon>
         <CloseIcon />
       </Icon>
 
-      <SideBarMenu className="text-white">
+      <SideBarMenu className="text-white text-3xl pt-36">
         <li>
           <SidebarLink href="/">Home</SidebarLink>
         </li>
@@ -91,7 +96,7 @@ const SideBar = ({ isOpen, toggle }) => {
           <SidebarLink href="/blog">Blog</SidebarLink>
         </li> */}
       </SideBarMenu>
-    </SidebarContainer>
+    </div>
     // </motion.div>
   );
 };

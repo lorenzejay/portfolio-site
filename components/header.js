@@ -38,7 +38,7 @@ export const NavMenu = styled.ul`
 const Header = ({ toggle }) => {
   return (
     <header
-      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-36 2xl:px-44 relative bg-transparent text-black`}
+      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-36 2xl:px-44 relative bg-transparent text-black `}
       style={{ height: "14vh" }}
     >
       <h1 className="text-3xl font-bold uppercase">Lorenze Jay</h1>
@@ -46,15 +46,15 @@ const Header = ({ toggle }) => {
         <FaBars className="text-black" />
       </MobileIcon>
       <NavMenu className={"flex justify-around text-black items-center  text-lg lg:text-xl"}>
-        <li className="hover:border-b-2 border-red-300 ">
+        <li className="hidden md:block hover:border-b-2 border-red-300 ">
           <Link className={""} href="/">
             Home
           </Link>
         </li>
-        <li className="hover:border-b-2 border-red-300 ">
+        <li className="hover:border-b-2 border-red-300 mx-1">
           <Link href="/about">About</Link>
         </li>
-        <li className="hover:border-b-2 border-red-300 ">
+        <li className="hover:border-b-2 border-red-300 mx-1">
           <Link className={""} href="/projects">
             Projects
           </Link>
