@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-center border-t-2 w-full h-full text-sm py-10">
+    <footer className="flex flex-col items-center justify-center border-t-2 w-full h-full text-sm mt-20 py-10">
       {/* <h2 className="font-semibold mx-auto text-center text-black text-lg">Lorenze Hernandez</h2> */}
       <span className="flex text-3xl">
         <a href="https://github.com/lorenzejay" target="_blank" rel="noreferrer">
