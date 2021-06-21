@@ -1,66 +1,5 @@
-import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
-export const SidebarContainer = styled.div`
-  position: fixed;
-  z-index: 19;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: grid;
-  align-items: center;
-  top: 0;
-  left: 0;
-  transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-`;
-
-export const CloseIcon = styled(FaTimes)`
-  color: #fff;
-`;
-
-export const Icon = styled.div`
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-  background: transparent;
-  font-size: 2rem;
-  cursor: pointer;
-  outline: pointer;
-`;
-
-export const SidebarWrapper = styled.div`
-  color: #fff;
-`;
-
-export const SideBarMenu = styled.ul`
-  .darkmode-btn {
-    cursor: pointer;
-    margin-bottom: 15px;
-  }
-  li {
-    font-size: 2rem;
-    margin: 10px 0;
-    &:hover {
-      color: #ea5454;
-      transition: 0.2s ease-in-out;
-    }
-  }
-`;
-
-export const SidebarLink = styled(Link)`
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  color: #fff;
-  cursor: pointer;
-  margin-bottom: 5vh; */
-`;
 
 const SideBar = ({ isOpen, toggle }) => {
   return (
@@ -71,27 +10,27 @@ const SideBar = ({ isOpen, toggle }) => {
       } ${isOpen ? "top-0" : "-top-full"} `}
       onClick={toggle}
     >
-      <Icon>
-        <CloseIcon />
-      </Icon>
+      <div className="absolute top-10 right-8 bg-transparent text-4xl cursor-pointer focus:outline-none outline-none text-white">
+        <FaTimes />
+      </div>
 
-      <SideBarMenu className="text-white text-3xl flex flex-col justify-center items-center">
-        <li>
-          <SidebarLink href="/">Home</SidebarLink>
+      <ul className="text-white text-3xl list flex flex-col justify-center items-center list-none">
+        <li className="my-1">
+          <Link href="/">Home</Link>
         </li>
-        <li>
-          <SidebarLink href="/about">About</SidebarLink>
+        <li className="my-1">
+          <Link href="/about">About</Link>
         </li>
-        <li>
-          <SidebarLink href="/projects">Projects</SidebarLink>
+        <li className="my-1">
+          <Link href="/projects">Projects</Link>
         </li>
-        <li>
-          <SidebarLink href="/contact">Contact</SidebarLink>
+        <li className="my-1">
+          <Link href="/contact">Contact</Link>
         </li>
         {/* <li>
-          <SidebarLink href="/blog">Blog</SidebarLink>
+          <Link href="/blog">Blog</Link>
         </li> */}
-      </SideBarMenu>
+      </ul>
     </div>
     // </motion.div>
   );
