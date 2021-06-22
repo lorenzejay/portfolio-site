@@ -30,13 +30,25 @@ const ProjectSection = () => {
     <section className="lg:min-h-screen">
       <div className="project-grid flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 text-white lg:gap-3 pt-10">
         <div className="bg-blue-400 h-72 2xl:h-96 p-4 col-span-1 rounded-lg flex flex-col">
-          <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Uplift Digital Solutions</h3>
+          <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Kallo</h3>
           <p className="text-lg lg:text-base 2xl:text-2xl my-3">
-            Freelance Website which aims to help businesses utilize their website to generate more
-            revenue.
+            Kanban board and note taking website.
           </p>
-          <a href="https://upliftdigitalsolutions.com/" target="_blank" className="underline ">
-            Visit Site Here
+          <p>Built with:</p>
+          <ul>
+            <li>Next.js</li>
+            <li>Express</li>
+            <li>Node.js</li>
+            <li>PostgreSQL</li>
+            <li>Beautiful D&D - Drag and Drop</li>
+            <li>Tailwind CSS</li>
+          </ul>
+          <a
+            href="https://github.com/lorenzejay/kallo"
+            target="_blank"
+            className="underline mt-3 flex items-center text-xl"
+          >
+            <FaGithub /> <span className="ml-3 tex-t">View Code</span>
           </a>
         </div>
 
@@ -48,11 +60,19 @@ const ProjectSection = () => {
               application.
             </p>
 
-            <div className="flex text-xl items-center mt-3 lg:absolute lg:bottom-0">
-              <a href="https://github.com/lorenzejay/the-sizzzle" target="_blank" className="mr-2">
+            <div className="flex text-xl items-center mt-3 lg:absolute lg:bottom-0 ">
+              <a
+                href="https://github.com/lorenzejay/the-sizzzle"
+                target="_blank"
+                className="mr-2 text-xl"
+              >
                 <FaGithub />
               </a>
-              <a href="https://thesizzzle.herokuapp.com/" target="_blank" className="underline">
+              <a
+                href="https://thesizzzle.herokuapp.com/"
+                target="_blank"
+                className="underline  text-xl"
+              >
                 Demo
               </a>
             </div>
