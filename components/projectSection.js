@@ -29,27 +29,29 @@ const ProjectSection = () => {
   return (
     <section className="lg:min-h-screen">
       <div className="project-grid flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-2 text-white lg:gap-3 pt-10">
-        <div className="bg-blue-400 h-72 2xl:h-96 p-4 col-span-1 rounded-lg flex flex-col">
-          <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Kallo</h3>
-          <p className="text-lg lg:text-base 2xl:text-2xl my-3">
-            Kanban board and note taking website.
-          </p>
-          <p>Built with:</p>
-          <ul>
+        <div className="bg-blue-400 lg:h-72 2xl:h-96 p-4 col-span-1 rounded-lg flex flex-col">
+          <div className="h-full relative">
+            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Kallo</h3>
+            <p className="text-lg lg:text-base 2xl:text-2xl my-3">
+              Kanban board and note taking website. Helps you stay organized and create agile boards
+              to organize tasks.
+            </p>
+            {/* <p>Built with:</p> */}
+            {/* <ul className="list-disc list-inside">
             <li>Next.js</li>
-            <li>Express</li>
             <li>Node.js</li>
             <li>PostgreSQL</li>
             <li>Beautiful D&D - Drag and Drop</li>
             <li>Tailwind CSS</li>
-          </ul>
-          <a
-            href="https://github.com/lorenzejay/kallo"
-            target="_blank"
-            className="underline mt-3 flex items-center text-xl"
-          >
-            <FaGithub /> <span className="ml-3 tex-t">View Code</span>
-          </a>
+          </ul> */}
+            <a
+              href="https://github.com/lorenzejay/kallo"
+              target="_blank"
+              className="underline mt-3 flex items-center text-xl absolute bottom-0"
+            >
+              <FaGithub /> <span className="ml-3 tex-t">View Code</span>
+            </a>
+          </div>
         </div>
 
         <div className="bg-red-400 col-span-2 min-h-80 lg:h-72 2xl:h-96 p-4 rounded-lg flex flex-col lg:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
