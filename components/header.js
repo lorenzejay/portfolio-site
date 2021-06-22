@@ -7,13 +7,13 @@ const Header = ({ toggle }) => {
       className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-36 2xl:px-44 relative bg-transparent text-black `}
       style={{ height: "14vh" }}
     >
-      <h1 className="text-3xl font-bold uppercase">Lorenze Jay</h1>
+      <h1 className="text-3xl font-bold uppercase tracking-widest ">Lorenze Jay</h1>
       <div onClick={toggle} className="block text-white text-2xl cursor-pointer md:hidden ">
         <FaBars className="text-black" />
       </div>
       <ul
         className={
-          "hidden md:flex justify-around list-none text-black items-center   text-lg lg:text-xl"
+          "hidden md:flex justify-around list-none text-black items-center   text-lg lg:text-xl tracking-wide font-semibold"
         }
       >
         <li className="hidden md:block hover:border-b-2 border-red-300 mx-4">

@@ -34,7 +34,7 @@ export default function Home() {
 
         <ThreeTraits />
         <About />
-        <TechIUse />
+        {/* <TechIUse /> */}
         <ProjectSection />
       </Layout>
     </>
