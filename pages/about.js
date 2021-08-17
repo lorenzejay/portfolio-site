@@ -23,7 +23,7 @@ const About = () => {
             <div className="lg:w-1/2">
               <h3 className="mr-auto font-bold text-3xl sm:text-4xl ">Who is Lorenze ?</h3>
               <img
-                src="/ljpp.jpg"
+                src="/ljaph-5.jpg"
                 className="rounded-full object-cover w-64 h-64 mx-auto my-10 lg:mx-0 lg:rounded-md"
                 alt="profile"
               />
