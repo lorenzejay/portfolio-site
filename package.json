@@ -1,5 +1,5 @@
 {
-  "name": "web-dev-protfolio-2021",
+  "name": "web-dev-portfolio-2021",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "axios": "^0.21.1",
     "essential-slices": "^1.0.3",
     "framer-motion": "^3.6.7",
-    "next": "10.0.7",
+    "next": "^11.1.0",
     "next-slicezone": "0.0.13",
     "next-transpile-modules": "^6.3.0",
     "prismic-javascript": "^3.0.2",

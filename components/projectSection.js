@@ -36,14 +36,17 @@ const ProjectSection = () => {
               Kanban board and note taking website. Helps you stay organized and create agile boards
               to organize tasks.
             </p>
+            <div className='md:absolute md:bottom-0 flex items-center text-xl'>
 
             <a
               href="https://github.com/lorenzejay/kallo"
               target="_blank"
-              className="underline mt-3 flex items-center text-xl md:absolute md:bottom-0"
-            >
-              <FaGithub /> <span className="ml-3">View Code</span>
+              className="underline mt-3 mr-3"
+              >
+              <FaGithub /> 
             </a>
+            <a  className="underline mt-3 " href='https://kallo-productivity.herokuapp.com/' target="_blank">Demo</a>
+              </div>
           </div>
         </div>
 
@@ -92,10 +95,9 @@ const ProjectSection = () => {
             onHoverStart={growGrid3}
           >
             <div>
-              <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">Photographer Preset Shop</h3>
+              <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">Esthetician Business Website</h3>
               <p className="text-lg lg:text-base 2xl:text-2xl my-3 ">
-                A site that generated over $900 of passive income selling digital presets during the
-                first 3 months since it went live.
+                Features a beautifully designed website showcasing an estheticians business. The website has helped the owner get more bookings.
               </p>
 
               <div className="flex text-xl items-center mt-3 ">
@@ -106,14 +108,14 @@ const ProjectSection = () => {
                 >
                   <FaGithub />
                 </a>
-                <a href="https://thesizzzle.herokuapp.com/" target="_blank" className="underline">
-                  Demo
+                <a href="https://lorientskincare.com/" target="_blank" className="underline">
+                  Website
                 </a>
               </div>
             </div>
             {
               <img
-                src={"/charis-presets-mockup-min.png"}
+                src={"/lorient_mockup.png"}
                 alt="image of my project thumnail"
                 className={`object-cover w-96 md:w-64  md:h-64 lg:mx-0 ${
                   span4 ? "hidden" : "md:block"

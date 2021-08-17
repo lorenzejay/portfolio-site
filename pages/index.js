@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       {/* <InitialTransition /> */}
       <Layout homepage={true} className="absolute">
-        <Hero imageSrc={"/homebg.png"} />
+        <Hero />
 
         <ThreeTraits />
         <About />
