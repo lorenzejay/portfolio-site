@@ -62,7 +62,10 @@ const Contact = () => {
       data: inputs,
     })
       .then((response) => {
-        handleServerResponse(true, "Thank you for submitting. We will get back to you soon.");
+        handleServerResponse(
+          true,
+          "Thank you for submitting. We will get back to you soon."
+        );
       })
       .catch((error) => {
         handleServerResponse(false, error.response.data.error);
@@ -85,7 +88,7 @@ const Contact = () => {
       </Head>
       <InitialTransition />
       <Layout className="absolute w-full">
-        <section className="min-h-screen">
+        {/* <section className="min-h-screen">
           <PageBanners title="Have an idea?" className="bg-red-300" />
           <h2 className="text-2xl font-thin lg:text-3xl lg:font-bold w-full text-center rounded-md my-10">
             Let's see if we're the right fit together.
@@ -127,20 +130,38 @@ const Contact = () => {
               className="w-full border-b-2  border-black border-opacity-10 px-3 py-1 mt-2 rounded-none"
               rows="5"
             ></textarea>
-            <button type="submit" className="bg-black text-white px-5 py-2 mt-4 w-full mb-10">
-              {!status.submitting ? (!status.submitted ? "Submit" : "Submitted") : "Submitting..."}
+            <button
+              type="submit"
+              className="bg-black text-white px-5 py-2 mt-4 w-full mb-10"
+            >
+              {!status.submitting
+                ? !status.submitted
+                  ? "Submit"
+                  : "Submitted"
+                : "Submitting..."}
             </button>
             {status.info.error && (
-              <div className="error text-red-500 mb-10">Error: {status.info.msg}</div>
+              <div className="error text-red-500 mb-10">
+                Error: {status.info.msg}
+              </div>
             )}
             {!status.info.error && status.info.msg && (
               <p className="text-green-500 mb-10">{status.info.msg}</p>
             )}
           </form>
-        </section>
+        </section> */}
+
+        <iframe
+          src="https://app.cal.com/lorenzejay"
+          frameborder="0"
+          allowfullscreen
+          className="w-full p-10 min-h-screen"
+        ></iframe>
       </Layout>
     </>
   );
 };
 
 export default Contact;
+
+// <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Schedule a meeting</title><style>body {margin: 0;}iframe {height: calc(100vh - 4px);width: calc(100vw - 4px);box-sizing: border-box;}</style></head><body><iframe src="https://app.cal.com/lorenzejay" frameborder="0" allowfullscreen></iframe></body></html>
