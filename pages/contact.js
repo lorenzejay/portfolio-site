@@ -151,12 +151,12 @@ const Contact = () => {
           </form>
         </section> */}
 
-        <iframe
+        {/* <iframe
           src="https://app.cal.com/lorenzejay"
           frameborder="0"
           allowfullscreen
           className="w-full p-10 min-h-screen"
-        ></iframe>
+        ></iframe> */}
       </Layout>
     </>
   );
