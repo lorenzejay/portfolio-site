@@ -88,6 +88,17 @@ const Contact = () => {
       </Head>
       <InitialTransition />
       <Layout className="absolute w-full">
+        {/* https://app.cal.com/event-types/29832 */}
+        <section className="overflow-y-hidden contact lg:p-10 bg-white lg:py-32 lg:px-32 text-black">
+          <iframe
+            id="contact"
+            width={"100%"}
+            height={"775"}
+            src="https://cal.com/lorenzejay/30min"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </section>
         {/* <section className="min-h-screen">
           <PageBanners title="Have an idea?" className="bg-red-300" />
           <h2 className="text-2xl font-thin lg:text-3xl lg:font-bold w-full text-center rounded-md my-10">
