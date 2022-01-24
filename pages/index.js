@@ -16,7 +16,10 @@ export default function Home() {
           name="description"
           content="Los Angeles Based Front-End Web Developer portfolio site. Come check out a clean UI, modern design and added animation."
         />
-        <meta name="twitter:title" content="Web Developer | Lorenze Hernandez" />
+        <meta
+          name="twitter:title"
+          content="Web Developer | Lorenze Hernandez"
+        />
         <meta
           name="twitter:description"
           content="Los Angeles Based Front-End Web Developer portfolio site. Come check out a clean UI, modern design and added animation. "
@@ -29,7 +32,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@lorenzejayTech" />
       </Head>
       {/* <InitialTransition /> */}
-      <Layout homepage={true} className="absolute">
+      <Layout homepage={true} className="relative">
         <Hero />
 
         <ThreeTraits />
