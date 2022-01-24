@@ -8,11 +8,13 @@ const About = () => {
       />
       <div className="flex flex-col mb-5 items-start">
         <h2 className="text-3xl xl:text-5xl">
-          <span className="text-red-400">Specialist</span> in creative digital products.
+          <span className="text-red-400">Specialist</span> in creative digital
+          products.
         </h2>
         <p className="text-gray-500 leading-relaxed mt-4 xl:text-lg xl:w-3/4">
-          As an avid lover of technology, minimalism, and art. I enjoy creating customer facing
-          applications that allow me to combine my background in tech and business.
+          As an avid lover of technology, minimalism, and art, I enjoy creating
+          customer-facing applications that combine my tech and business
+          background
         </p>
       </div>
     </section>

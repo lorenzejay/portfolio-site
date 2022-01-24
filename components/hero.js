@@ -23,8 +23,8 @@ const Hero = () => {
             Lorenze Jay<span>👋</span>
           </p>
           <h1 className="text-2xl text-white z-3 mb-10 xl:text-2xl 2xl:text-4xl   py-2  md:w-3/4 lg:w-1/2 w-11/12">
-            I build accessible, inclusive products and digital
-            experiences for a variety of clients.
+            I build accessible, inclusive products and digital experiences for a
+            variety of clients.
           </h1>
           <Link href="/projects">
             <button className="text-white bg-blue-400 px-4 py-2 rounded-md cursor-pointer focus:outline-none">
@@ -33,9 +33,9 @@ const Hero = () => {
           </Link>
         </article>
         <img
-          src={"/ljaph-7.jpg"}
+          src={"/ljaph-5.jpg"}
           alt="portrait of lorenze hernandez."
-          className="rounded-full z-10 object-cover  w-72 h-72 md:max-h-96 md:w-1/2 lg:h-3/4  xl:max-h-96 2xl:w-1/3   mb-10 sm:mt-10 lg:mb-10 xl:mb-0  lg:mt-0 "
+          className="relative rounded-full z-10 object-cover  w-72 h-72 md:max-h-96 md:w-1/2 lg:h-3/4  xl:h-72  2xl:w-1/3   mb-10 sm:mt-10 lg:mb-10 xl:mb-0  lg:mt-0 "
         />
       </div>
     </motion.main>
