@@ -26,13 +26,13 @@ const About = () => {
               </h3> */}
               <img
                 src="/ljaph-5.jpg"
-                className="rounded-full object-cover w-64 h-64 mx-auto my-10 lg:mx-0 lg:rounded-md"
+                className="rounded-full object-cover w-64 h-64 xl:w-96 xl:h-96 mx-auto my-10 lg:mx-0 "
                 alt="profile"
               />
             </div>
             <div className="lg:w-1/2">
               <h3 className="font-semibold ">
-                My name is Lorenze Hernandez and I make Full Stack Web
+                My name is Lorenze Hernandez and <br /> I make Full Stack Web
                 Applications.
               </h3>
               <p className="my-3 text-xl">
