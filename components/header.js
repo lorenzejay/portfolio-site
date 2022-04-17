@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 const Header = ({ toggle }) => {
   return (
     <header
-      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 2xl:max-w-8xl mx-auto relative bg-transparent text-black `}
+      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-32 2xl:max-w-8xl mx-auto relative bg-transparent text-black `}
       style={{ height: "14vh" }}
     >
       <h1 className="text-3xl font-bold uppercase tracking-widest ">
