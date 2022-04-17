@@ -33,7 +33,7 @@ const Hero = () => {
           </Link>
         </div>
         <div className="lg:w-1/2 z-10 mx-auto ">
-          <div className="relative  w-64 h-64 lg:w-72 lg:h-56 xl:w-96 xl:h-96 mb-24 rounded-full">
+          <div className="relative  w-64 h-64 lg:w-72 lg:h-72 xl:w-96 xl:h-96 mb-24 rounded-full">
             <Image
               src="/ljaph-5.jpg"
               alt="Portrait of Lorenze Jay Hernandez"
