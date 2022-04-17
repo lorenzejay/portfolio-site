@@ -3,11 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      maxWidth: {
+        "8xl": "2000px",
+      },
       maxHeight: {
         0: "0",
-        "1/4": "25%",
-        "1/2": "50%",
-        "3/4": "75%",
+        "1/4": "25vh",
+        "1/2": "50vh",
+        "3/4": "75vh",
         fifty: "50vh",
         threeFourths: "75vh",
         full: "100%",

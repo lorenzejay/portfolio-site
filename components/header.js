@@ -4,11 +4,16 @@ import { FaBars } from "react-icons/fa";
 const Header = ({ toggle }) => {
   return (
     <header
-      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 xl:px-36 2xl:px-44 relative bg-transparent text-black `}
+      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-20 2xl:max-w-8xl mx-auto relative bg-transparent text-black `}
       style={{ height: "14vh" }}
     >
-      <h1 className="text-3xl font-bold uppercase tracking-widest ">Lorenze Jay</h1>
-      <div onClick={toggle} className="block text-white text-2xl cursor-pointer md:hidden ">
+      <h1 className="text-3xl font-bold uppercase tracking-widest ">
+        Lorenze Jay
+      </h1>
+      <div
+        onClick={toggle}
+        className="block text-white text-2xl cursor-pointer md:hidden "
+      >
         <FaBars className="text-black" />
       </div>
       <ul

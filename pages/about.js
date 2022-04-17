@@ -3,7 +3,7 @@ import React from "react";
 import InitialTransition from "../components/intialTransition";
 import Layout from "../components/layout";
 import PageBanners from "../components/pageBanners";
-
+import Image from "next/image";
 const About = () => {
   return (
     <>
@@ -19,23 +19,23 @@ const About = () => {
       <Layout className="absolute w-full">
         <main className="min-h-screen">
           <PageBanners title="About Me" className="bg-blue-400" />
-          <div className="py-12 w-full flex flex-col lg:flex-row justify-around">
+          <div className="py-12 w-full flex flex-col lg:flex-row justify-around lg:space-x-20">
             <div className="lg:w-1/2">
-              {/* <h3 className="mr-auto font-bold text-3xl sm:text-4xl ">
-                Who is Lorenze ?
-              </h3> */}
-              <img
-                src="/ljaph-5.jpg"
-                className="rounded-full object-cover w-64 h-64 xl:w-96 xl:h-96 mx-auto my-10 lg:mx-0 "
-                alt="profile"
-              />
+              <div className="relative w-full h-full lg:w-3/4 2xl:w-1/2 ml-auto">
+                <Image
+                  src="/ljaph-5.jpg"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                />
+              </div>
             </div>
             <div className="lg:w-1/2">
-              <h3 className="font-semibold ">
+              <h3 className="font-semibold text-3xl">
                 My name is Lorenze Hernandez and <br /> I make Full Stack Web
                 Applications.
               </h3>
-              <p className="my-3 text-xl">
+              <p className="my-3 text-xl 2xl:text-3xl">
                 As an avid lover of technology, minimalism, and art, I enjoy
                 creating customer-facing applications that combine my tech and
                 business background. Being in the creative sphere since I was 14
@@ -58,7 +58,7 @@ const About = () => {
                 lets me build things we commonly use on a day to day basis -
                 like productivity, blogs, or social media applications.
               </p> */}
-              <p className="my-3 text-xl">
+              <p className="my-3 text-xl 2xl:text-3xl">
                 My main focus is to build accessible, inclusive products and
                 digital experiences for a variety of clients.
               </p>
