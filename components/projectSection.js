@@ -27,26 +27,31 @@ const ProjectSection = () => {
 
   //grid of 3 cols
   return (
-    <section className="lg:min-h-screen">
+    <section className="">
       <div className="project-grid flex flex-col md:grid md:grid-cols-3 md:grid-rows-2 items-center text-white md:gap-3 pt-10">
         <div className="bg-blue-400 md:h-72 2xl:h-96 p-4 col-span-1 rounded-lg flex flex-col">
           <div className="h-full relative">
             <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Kallo</h3>
             <p className="text-lg lg:text-base 2xl:text-2xl my-3">
-              Kanban board and note taking website. Helps you stay organized and create agile boards
-              to organize tasks.
+              Kanban board and note taking website. Helps you stay organized and
+              create agile boards to organize tasks.
             </p>
-            <div className='md:absolute md:bottom-0 flex items-center text-xl'>
-
-            <a
-              href="https://github.com/lorenzejay/kallo"
-              target="_blank"
-              className="underline mt-3 mr-3"
+            <div className="md:absolute md:bottom-0 flex items-center text-xl">
+              <a
+                href="https://github.com/lorenzejay/kallo"
+                target="_blank"
+                className="underline mt-3 mr-3"
               >
-              <FaGithub /> 
-            </a>
-            <a  className="underline mt-3 " href='https://kallo-productivity.herokuapp.com/' target="_blank">Demo</a>
-              </div>
+                <FaGithub />
+              </a>
+              <a
+                className="underline mt-3 "
+                href="https://kallo-productivity.herokuapp.com/"
+                target="_blank"
+              >
+                Demo
+              </a>
+            </div>
           </div>
         </div>
 
@@ -54,8 +59,8 @@ const ProjectSection = () => {
           <div className="md:w-3/4 xl:w-1/2 relative">
             <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">The Sizzzle</h3>
             <p className="text-lg lg:text-base 2xl:text-2xl my-3">
-              Revolutionizing Food Blogging into a simpler and minimalist social media type
-              application.
+              Revolutionizing Food Blogging into a simpler and minimalist social
+              media type application.
             </p>
 
             <div className="flex text-xl items-center mt-3 lg:absolute lg:bottom-0 ">
@@ -95,9 +100,13 @@ const ProjectSection = () => {
             onHoverStart={growGrid3}
           >
             <div>
-              <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">Esthetician Business Website</h3>
+              <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">
+                Esthetician Business Website
+              </h3>
               <p className="text-lg lg:text-base 2xl:text-2xl my-3 ">
-                Features a beautifully designed website showcasing an estheticians business. The website has helped the owner get more bookings.
+                Features a beautifully designed website showcasing an
+                estheticians business. The website has helped the owner get more
+                bookings.
               </p>
 
               <div className="flex text-xl items-center mt-3 ">
@@ -108,7 +117,11 @@ const ProjectSection = () => {
                 >
                   <FaGithub />
                 </a>
-                <a href="https://lorientskincare.com/" target="_blank" className="underline">
+                <a
+                  href="https://lorientskincare.com/"
+                  target="_blank"
+                  className="underline"
+                >
                   Website
                 </a>
               </div>
@@ -132,7 +145,9 @@ const ProjectSection = () => {
             onHoverEnd={growReset}
             transition={{ duration: 2 }}
           >
-            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">See all projects</h3>
+            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">
+              See all projects
+            </h3>
             <motion.img
               alt="a waving hand"
               src={"/unicornhand.svg"}
@@ -148,13 +163,6 @@ const ProjectSection = () => {
               }}
               whileHover={{ rotate: 20 }}
             />
-            {/* <img
-            className={`absolute bottom-0 left-0 right-0 w-32 h-32 mx-auto hidden ${
-              span4 ? "lg:block" : "md:hidden"
-            }`}
-            src={"/unicornhand.svg"}
-          /> */}
-
             <Link href="/projects">
               <BiRightTopArrowCircle
                 size={64}
