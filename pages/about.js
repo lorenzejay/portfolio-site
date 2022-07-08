@@ -21,7 +21,7 @@ const About = () => {
           <PageBanners title="About Me" className="bg-blue-400" />
           <div className="py-12 w-full flex flex-col lg:flex-row justify-around lg:space-x-20">
             <div className="lg:w-1/2">
-              <div className="relative w-full h-full lg:w-3/4 2xl:w-1/2 ml-auto">
+              <div className="relative w-full h-full lg:w-[400px] lg:h-[400px]">
                 <Image
                   src="/ljaph-5.jpg"
                   layout="fill"

@@ -5,7 +5,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <motion.main
-      className=" relative  w-full min-h-1/2 lg:max-h-threeFourths 2xl:max-h-1/2 rounded-lg"
+      className="relative  w-full lg:h-[500px] rounded-lg"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.5 }}
