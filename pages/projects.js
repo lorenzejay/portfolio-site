@@ -5,6 +5,7 @@ import { Client } from "../prismic-configuration.js";
 import Prismic from "prismic-javascript";
 import { RichText } from "prismic-reactjs";
 import Head from "next/head";
+import Image from "next/image";
 
 const Projects = ({ projects }) => {
   const projectList = projects.results[0].data.body[0].items;
@@ -29,12 +30,16 @@ const Projects = ({ projects }) => {
                 className="flex flex-col lg:flex-row items-center lg:justify-between w-full my-3 lg:my-5 mb-10"
                 key={i}
               >
-                <img
-                  src={project.project_image.url}
-                  alt="project thumnail"
-                  className="object-cover w-64 h-64 lg:w-80 lg:h-80 2xl:w-96 2xl:h-96"
-                />
-                <div className="lg:w-1/2 lg:mt-20  2xl:mt-10">
+                <div className="lg:w-2/3">
+                  <Image
+                    src={project.project_image.url}
+                    alt="project thumnail"
+                    width={2000}
+                    height={1335}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="lg:w-1/3 lg:mt-20  2xl:mt-10">
                   <div className="text-4xl font-bold">
                     <RichText render={project.project_title} />
                   </div>
@@ -60,7 +65,9 @@ const Projects = ({ projects }) => {
 };
 
 export async function getServerSideProps() {
-  const projects = await Client().query(Prismic.Predicates.at("document.type", "projects_gallery"));
+  const projects = await Client().query(
+    Prismic.Predicates.at("document.type", "projects_gallery")
+  );
 
   return {
     props: {

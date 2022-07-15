@@ -26,6 +26,9 @@ module.exports = {
         full: "100%",
         screen: "100vh",
       },
+      screens: {
+        "3xl": "2000px",
+      },
     },
   },
   variants: {

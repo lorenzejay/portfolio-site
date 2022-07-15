@@ -1,11 +1,27 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
 const Header = ({ toggle }) => {
+  const [showNav, setShowNav] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const { pageYOffset } = window;
+      if (pageYOffset > 150) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header
-      className={`flex justify-between w-full items-center t-0 z-10 px-5 lg:px-32 2xl:max-w-8xl mx-auto relative bg-transparent text-black `}
-      style={{ height: "14vh" }}
+      className={`${
+        showNav ? "bg-transparent shadow-xl" : "sticky top-0 block bg-white"
+      } flex justify-between w-full items-center h-[10vh] z-[100] px-5 lg:px-32 2xl:max-w-8xl mx-auto text-black transition duration-500 ease-in-out`}
     >
       <h1 className="text-3xl font-bold uppercase tracking-widest ">
         Lorenze Jay
@@ -18,7 +34,7 @@ const Header = ({ toggle }) => {
       </div>
       <ul
         className={
-          "hidden md:flex justify-around list-none text-black items-center   text-lg lg:text-xl tracking-wide font-semibold"
+          "hidden md:flex justify-around list-none text-black items-center text-lg tracking-wide font-semibold"
         }
       >
         <li className="hidden md:block hover:border-b-2 border-red-300 mx-4">
