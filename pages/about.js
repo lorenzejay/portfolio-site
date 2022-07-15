@@ -35,7 +35,7 @@ const About = () => {
                 My name is Lorenze Hernandez and <br /> I make Full Stack Web
                 Applications.
               </h3>
-              <p className="my-3 text-xl 2xl:text-3xl">
+              <p className="my-3 text-xl 3xl:text-3xl">
                 As an avid lover of technology, minimalism, and art, I enjoy
                 creating customer-facing applications that combine my tech and
                 business background. Being in the creative sphere since I was 14
@@ -47,18 +47,8 @@ const About = () => {
                 MongoDB, Git, GitHub, and PHP. I am currently open to
                 opportunities in Web Development.
               </p>
-              {/* <p className="my-3 text-xl">
-                I love building full applications because I get the full
-                experience of how an entire application works. Being an artist I
-                love creating the front-end. At the same time, I believe to have
-                a great frontend, it's important to understand how the backend
-                works. The backend is where our application can communicate with
-                servers and databases as well as where most of our logic /
-                algorithms live. Developing an application from front to back
-                lets me build things we commonly use on a day to day basis -
-                like productivity, blogs, or social media applications.
-              </p> */}
-              <p className="my-3 text-xl 2xl:text-3xl">
+
+              <p className="my-3 text-xl 3xl:text-3xl">
                 My main focus is to build accessible, inclusive products and
                 digital experiences for a variety of clients.
               </p>
