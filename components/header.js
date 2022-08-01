@@ -20,12 +20,14 @@ const Header = ({ toggle }) => {
   return (
     <header
       className={`${
-        showNav ? "bg-transparent shadow-xl" : "sticky top-0 block bg-white"
+        showNav ? "bg-transparent shadow-xl" : "sticky top-0 block bg-[#F1F4F3]"
       } flex justify-between w-full items-center h-[10vh] z-[100] px-5 lg:px-32 2xl:max-w-8xl mx-auto text-black transition duration-500 ease-in-out`}
     >
-      <h1 className="text-3xl font-bold uppercase tracking-widest ">
-        Lorenze Jay
-      </h1>
+      <Link href={"/"}>
+        <a className="text-3xl font-bold uppercase tracking-widest ">
+          Lorenze Jay
+        </a>
+      </Link>
       <div
         onClick={toggle}
         className="block text-white text-2xl cursor-pointer md:hidden "
@@ -37,11 +39,6 @@ const Header = ({ toggle }) => {
           "hidden md:flex justify-around list-none text-black items-center text-lg tracking-wide font-semibold"
         }
       >
-        <li className="hidden md:block hover:border-b-2 border-red-300 mx-4">
-          <Link className={""} href="/">
-            Home
-          </Link>
-        </li>
         <li className="hover:border-b-2 border-red-300 mx-4">
           <Link href="/about">About</Link>
         </li>

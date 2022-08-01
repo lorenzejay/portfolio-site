@@ -1,3 +1,6 @@
 {
-    "marquee.configuration.launchOnStartup": false
+    "marquee.configuration.launchOnStartup": false,
+    "marquee.widgets.npm-stats.packageNames": [
+        "web-dev-portfolio-2021"
+    ]
 }
