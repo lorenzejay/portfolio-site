@@ -31,11 +31,11 @@ const About = () => {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <h3 className="font-semibold text-3xl">
+              <h3 className="font-semibold text-3xl text-white">
                 My name is Lorenze Hernandez and <br /> I make Full Stack Web
                 Applications.
               </h3>
-              <p className="my-3 text-xl 3xl:text-3xl">
+              <p className="my-3 text-xl 3xl:text-3xl text-gray-300">
                 As an avid lover of technology, minimalism, and art, I enjoy
                 creating customer-facing applications that combine my tech and
                 business background. Being in the creative sphere since I was 14
@@ -44,13 +44,8 @@ const About = () => {
                 main focus is to build accessible, inclusive products and
                 digital experiences for various clients. I have experience using
                 React.js, TailwindCSS, Redux, Node.js, SQL, Postgres, Firebase,
-                MongoDB, Git, GitHub, and PHP. I am currently open to
-                opportunities in Web Development.
-              </p>
-
-              <p className="my-3 text-xl 3xl:text-3xl">
-                My main focus is to build accessible, inclusive products and
-                digital experiences for a variety of clients.
+                MongoDB, Git, GitHub, and PHP and also design with tools like
+                figma.
               </p>
             </div>
           </div>

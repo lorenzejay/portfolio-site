@@ -37,5 +37,8 @@ module.exports = {
     gridColumnEnd: ["responsive", "hover"],
     borderWidth: ["hover", "focus"],
   },
+  daisyui: {
+    themes: ["dark"],
+  },
   plugins: [require("daisyui")],
 };
