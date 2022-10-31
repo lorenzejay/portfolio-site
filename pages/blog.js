@@ -1,10 +1,7 @@
 import { gql, GraphQLClient } from "graphql-request";
 import React, { useMemo } from "react";
 import Layout from "../components/layout";
-const client = new GraphQLClient(
-  process.env.NEXT_PUBLIC_GRAPHQL_URL_ENDPOINT,
-  {}
-);
+const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHQL_URL_ENDPOINT);
 
 export const getStaticProps = async () => {
   const { blogs } = await client.request(
@@ -36,7 +33,7 @@ export const getStaticProps = async () => {
   // };
 };
 const Blog = ({ blogs }) => {
-  console.log("props", blogs);
+  // console.log("props", blogs);
   // const posts = useMemo(() => {
   //   if (data?.posts) {
   //     return data.posts;
