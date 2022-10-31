@@ -4,7 +4,7 @@ import Hero from "../components/hero";
 import Layout from "../components/layout";
 import ProjectSection from "../components/projectSection";
 import ThreeServices from "../components/ThreeServices";
-import ThreeTraits from "../components/threeTraits";
+// import ThreeTraits from "../components/threeTraits";
 // import TechIUse from "../components/techIUse";
 
 export default function Home() {
@@ -32,13 +32,11 @@ export default function Home() {
         />
         <meta name="twitter:creator" content="@lorenzejayTech" />
       </Head>
-      {/* <InitialTransition /> */}
       <Layout homepage={true} className="relative">
         <Hero />
 
         <ThreeServices />
         <About />
-        {/* <TechIUse /> */}
         <ProjectSection />
       </Layout>
     </>
