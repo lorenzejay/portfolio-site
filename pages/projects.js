@@ -1,14 +1,12 @@
 import Layout from "../components/layout";
 import PageBanners from "../components/pageBanners";
 import InitialTransition from "../components/intialTransition";
-import { Client } from "../prismic-configuration.js";
-import Prismic from "prismic-javascript";
-import { RichText } from "prismic-reactjs";
 import Head from "next/head";
 import Image from "next/image";
 
-const Projects = ({ projects }) => {
-  const projectList = projects.results[0].data.body[0].items;
+const Projects = () => {
+  // const project  List = projects.results[0].data.body[0].items;
+  const projectList = [];
 
   return (
     <>
@@ -64,15 +62,15 @@ const Projects = ({ projects }) => {
   );
 };
 
-export async function getServerSideProps() {
-  const projects = await Client().query(
-    Prismic.Predicates.at("document.type", "projects_gallery")
-  );
+// export async function getServerSideProps() {
+//   const projects = await Client().query(
+//     Prismic.Predicates.at("document.type", "projects_gallery")
+//   );
 
-  return {
-    props: {
-      projects,
-    },
-  };
-}
+//   return {
+//     props: {
+//       projects,
+//     },
+//   };
+// }
 export default Projects;
