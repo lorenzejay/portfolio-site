@@ -3,6 +3,7 @@ import About from "../components/about";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
 import ProjectSection from "../components/projectSection";
+import ThreeServices from "../components/ThreeServices";
 import ThreeTraits from "../components/threeTraits";
 // import TechIUse from "../components/techIUse";
 
@@ -35,7 +36,7 @@ export default function Home() {
       <Layout homepage={true} className="relative">
         <Hero />
 
-        <ThreeTraits />
+        <ThreeServices />
         <About />
         {/* <TechIUse /> */}
         <ProjectSection />

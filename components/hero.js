@@ -22,14 +22,12 @@ const Hero = () => {
           <p className="text-5xl mb-5 text-white uppercase trackig-wide">
             Lorenze Jay<span>👋</span>
           </p>
-          <h1 className="text-2xl text-white z-3 font-normal mb-10 xl:text-2xl py-2  md:w-3/4 lg:w-1/2 w-11/12">
-            I build accessible, inclusive products and digital experiences for a
-            variety of clients.
+          <h1 className="text-2xl text-white z-3 font-normal mb-10 xl:text-2xl py-2  md:w-3/4 lg:max-w-[400px] w-11/12">
+            I help clients deliver frontend solutions that engage users
+            effectively.
           </h1>
           <Link href="/projects">
-            <button className="text-white font-bold bg-blue-400 px-4 py-2 2xl:px-8 2xl:py-4 rounded-full cursor-pointer focus:outline-none hover:bg-blue-600 transition-all duration-500 ease-in-out hover:shadow-xl">
-              See Projects
-            </button>
+            <button className="btn btn-primary">See Projects</button>
           </Link>
         </div>
         <div className="lg:w-1/2 z-10 mx-auto ">

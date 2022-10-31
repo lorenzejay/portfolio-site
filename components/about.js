@@ -7,14 +7,14 @@ const About = () => {
         className="w-3/4 lg:w-1/2"
       />
       <div className="flex flex-col mb-5 items-start">
-        <h2 className="text-3xl xl:text-5xl">
+        <h2 className="text-3xl xl:text-5xl text-gray-100 lg:max-w-xl">
           <span className="text-red-400">Specialist</span> in creative digital
           products.
         </h2>
-        <p className="text-gray-500 leading-relaxed mt-4 xl:text-lg xl:w-3/4">
-          As an avid lover of technology, minimalism, and art, I enjoy creating
-          customer-facing applications that combine my tech and business
-          background
+        <p className="text-gray-300 leading-relaxed mt-4 xl:text-xl xl:w-3/4">
+          Helping technology startups, artists, and professional services create
+          digital experiences that build trust, authenticity and convert
+          visitors to users.
         </p>
       </div>
     </section>

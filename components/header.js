@@ -20,11 +20,11 @@ const Header = ({ toggle }) => {
   return (
     <header
       className={`${
-        showNav ? "bg-transparent shadow-xl" : "sticky top-0 block bg-[#F1F4F3]"
-      } flex justify-between w-full items-center h-[10vh] z-[100] px-5 lg:px-32 2xl:max-w-8xl mx-auto text-black transition duration-500 ease-in-out`}
+        showNav ? "bg-transparent shadow-xl" : "sticky top-0 block "
+      } flex justify-between w-full items-center h-[10vh] z-[100] px-5 lg:px-32 2xl:max-w-8xl mx-auto transition duration-500 ease-in-out`}
     >
       <Link href={"/"}>
-        <a className="text-3xl font-bold uppercase tracking-widest ">
+        <a className="text-3xl font-bold uppercase tracking-widest text-white">
           Lorenze Jay
         </a>
       </Link>
@@ -32,11 +32,11 @@ const Header = ({ toggle }) => {
         onClick={toggle}
         className="block text-white text-2xl cursor-pointer md:hidden "
       >
-        <FaBars className="text-black" />
+        <FaBars className="" />
       </div>
       <ul
         className={
-          "hidden md:flex justify-around list-none text-black items-center text-lg tracking-wide font-semibold"
+          "hidden md:flex justify-around list-none text-white uppercase items-center text-lg tracking-[0.03em] font-medium"
         }
       >
         <li className="hover:border-b-2 border-red-300 mx-4">

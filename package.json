@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "daisyui": "^2.36.1",
     "essential-slices": "^1.0.3",
     "framer-motion": "^3.6.7",
     "graphql": "^16.5.0",
