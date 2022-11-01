@@ -106,7 +106,7 @@ const ProjectSection = () => {
               </h3>
               <p
                 className={`text-lg lg:text-base 2xl:text-2xl my-3 ${
-                  span3 && "w-full line-clamp-5"
+                  span3 && "w-full line-clamp-3"
                 }`}
               >
                 Features a beautifully designed website showcasing an

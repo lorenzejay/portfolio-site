@@ -2,7 +2,6 @@ import Layout from "../components/layout";
 import PageBanners from "../components/pageBanners";
 import InitialTransition from "../components/intialTransition";
 import Head from "next/head";
-import Image from "next/image";
 
 const Projects = () => {
   // const project  List = projects.results[0].data.body[0].items;
@@ -22,40 +21,9 @@ const Projects = () => {
       <Layout className="absolute w-full">
         <div>
           <PageBanners title={"Projects"} />
-          {projectList.map((project, i) => {
-            return (
-              <section
-                className="flex flex-col lg:flex-row items-center lg:justify-between w-full my-3 lg:my-5 mb-10"
-                key={i}
-              >
-                <div className="lg:w-2/3">
-                  <Image
-                    src={project.project_image.url}
-                    alt="project thumnail"
-                    width={2000}
-                    height={1335}
-                    className="object-cover"
-                  />
-                </div>
-                <div className="lg:w-1/3 lg:mt-20  2xl:mt-10">
-                  <div className="text-4xl font-bold">
-                    <RichText render={project.project_title} />
-                  </div>
-                  <div className="text-base">
-                    <RichText render={project.project_description} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mt-4 mb-2">Built with:</h4>
-                    <ul className="list-disc list-inside lg:list-none lg:flex lg:flex-wrap lg:w-full lg:gap-3">
-                      {project.project_technologies.map((x) => (
-                        <li>{x.text}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </section>
-            );
-          })}
+          <div className="w-full text-center my-12 text-3xl tracking-[0.07em] text-white uppercase">
+            Coming soon
+          </div>
         </div>
       </Layout>
     </>

@@ -36,13 +36,13 @@ const Hero = () => {
           </Link>
         </div>
         <div className="lg:w-1/2 z-10 mx-auto ">
-          <div className="relative w-64 h-64 lg:w-72 lg:h-72 mb-24 rounded-full">
+          <div className="relative w-64 h-64 lg:w-72 lg:h-72 mb-24 rounded-full shadow-2xl overflow-hidden">
             <Image
               src="/ljaph-5.jpg"
               alt="Portrait of Lorenze Jay Hernandez"
               layout="fill"
               objectFit="cover"
-              className="rounded-full"
+              className="rounded-full shadow-2xl hover:scale-125 transition-transform ease-in-out"
             />
           </div>
         </div>

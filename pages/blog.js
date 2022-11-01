@@ -1,11 +1,12 @@
 import { gql, GraphQLClient } from "graphql-request";
 import Image from "next/image";
 import Link from "next/link";
-import Layout from "../../components/layout";
-import PageBanners from "../../components/pageBanners";
+import Layout from "../components/layout";
+import PageBanners from "../components/pageBanners";
 import moment from "moment";
+import clsx from "clsx";
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHQL_URL_ENDPOINT);
-const Linky = ({ name, href, classStr }) => {
+export const Linky = ({ name, href, classStr }) => {
   return (
     <Link
       href={href}
@@ -38,10 +39,6 @@ export const getStaticProps = async () => {
       blogs: blogs,
     },
   };
-  // return {
-  //   paths: data.events.map((event) => ({ params: { slug: event.slug } })),
-  //   fallback: "blocking",
-  // };
 };
 const Blog = ({ blogs }) => {
   return (
@@ -66,15 +63,15 @@ const Blog = ({ blogs }) => {
                   </div>
                 </Link>
                 <div className="w-12 mt-10 border-t-4 rounded-full border-covey-500" />
-                <div className="text-[#516C8C] font-medium my-4">
+                <div className="text-primary font-medium my-4">
                   {moment(post?.date).format("MMMM D, YYYY")}
                 </div>
                 <Link href={`/blog/${post?.slug}`}>
-                  <a className="text-primary font-semibold line-clamp-2 text-[20px] h-16 text-heading tracking-[0.035em] hover:underline">
+                  <a className="text-secondary font-semibold line-clamp-2 text-[24px] h-16 text-heading tracking-[0.035em] hover:underline">
                     {post?.title}
                   </a>
                 </Link>
-                <div className="line-clamp-3 text-[18px] h-28">
+                <div className="line-clamp-3 text-[18px] h-28 text-gray-300">
                   {post?.preview}
                 </div>
                 {post?.authors?.length > 0 && (

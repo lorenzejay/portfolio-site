@@ -89,7 +89,7 @@ const Contact = () => {
       <InitialTransition />
       <Layout className="absolute w-full">
         {/* https://app.cal.com/event-types/29832 */}
-        <section className="overflow-y-hidden contact lg:p-10 bg-white lg:py-32 lg:px-32 text-black">
+        <section className="overflow-y-hidden contact lg:p-10 lg:py-32 lg:px-32 text-black">
           <iframe
             id="contact"
             width={"100%"}

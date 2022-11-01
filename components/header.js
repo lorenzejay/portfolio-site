@@ -40,6 +40,9 @@ const Header = ({ toggle }) => {
         }
       >
         <li className="hover:border-b-2 border-red-300 mx-4">
+          <Link href="/blog">Blog</Link>
+        </li>
+        <li className="hover:border-b-2 border-red-300 mx-4">
           <Link href="/about">About</Link>
         </li>
         {/* <li className="hover:border-b-2 border-red-300 mx-4">

@@ -44,13 +44,13 @@ const Links = () => {
             className="rounded-full object-cover"
           />
         </div>
-        <p className="font-medium text-lg tracking-[0.03em] text-gray-600 my-6 w-3/4 text-center">
+        <p className="font-medium text-lg tracking-[0.03em] text-white my-6 w-3/4 text-center">
           Check out some of my work and personal projects.
         </p>
         <div className="flex flex-col space-y-6 w-full justify-center items-center">
           {socialLinks.map((links, i) => (
             <Link href={links.href} rel="noreferrer" key={i}>
-              <a className="uppercase font-medium py-4 rounded-md shadow-xl w-full sm:w-3/4 max-w-2xl 3xl:max-w-3xl text-center bg-white border hover:scale-105 transition-transform ease-in-out duration-300 tracking-[0.03em]">
+              <a className="text-[#1d1b1b] uppercase font-medium py-4 rounded-md shadow-xl w-full sm:w-3/4 max-w-2xl 3xl:max-w-3xl text-center bg-white border hover:scale-105 transition-transform ease-in-out duration-300 tracking-[0.03em]">
                 {links.name}
               </a>
             </Link>
