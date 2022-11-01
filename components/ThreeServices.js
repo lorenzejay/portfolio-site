@@ -13,7 +13,7 @@ const ThreeServices = () => {
               height={192}
             />
           </div>
-          <p className="text-2xl lg:text-3xl tracking-widest font-medium text-white">
+          <p className="text-2xl lg:text-3xl tracking-[0.07em] font-medium text-white">
             Designer
           </p>
           <p className="xl:text-xl text-gray-300">
@@ -30,7 +30,7 @@ const ThreeServices = () => {
               height={192}
             />
           </div>
-          <p className="text-2xl lg:text-3xl tracking-widest font-medium text-white">
+          <p className="text-2xl lg:text-3xl tracking-[0.07em] font-medium text-white">
             Developer
           </p>
           <p className="xl:text-xl text-gray-300">
@@ -47,12 +47,11 @@ const ThreeServices = () => {
               height={192}
             />
           </div>
-          <p className="text-2xl lg:text-3xl tracking-widest font-medium text-white">
+          <p className="whitespace-nowrap text-2xl lg:text-3xl tracking-[0.07em] font-medium text-white">
             Complete Lifecycle
           </p>
           <p className="xl:text-xl text-gray-300">
-            Engineering lifecycle encompasses both design and development
-            stages.
+            From designing to engineering, I got you covered.
           </p>
         </div>
       </div>

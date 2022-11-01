@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ProjectSection = () => {
   const [span3, setSpan3] = useState(true);
@@ -31,7 +32,7 @@ const ProjectSection = () => {
       <div className="project-grid flex flex-col md:grid md:grid-cols-3 md:grid-rows-2 items-center text-white md:gap-3 pt-10">
         <div className="bg-blue-400 md:h-72 2xl:h-96 p-4 col-span-1 rounded-lg flex flex-col">
           <div className="h-full relative">
-            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl ">Kallo</h3>
+            <h3 className="text-4xl xl:text-4xl 2xl:text-4xl ">Kallo</h3>
             <p className="text-lg lg:text-base 2xl:text-2xl my-3">
               Kanban board and note taking website. Helps you stay organized and
               create agile boards to organize tasks.
@@ -55,9 +56,9 @@ const ProjectSection = () => {
           </div>
         </div>
 
-        <div className="relative bg-red-400 col-span-2 min-h-80 md:h-72 2xl:h-96 p-4 rounded-lg flex flex-col md:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
+        <div className="relative bg-red-400 col-span-2 md:h-72 2xl:h-96 p-4 rounded-lg flex flex-col md:flex-row my-5 lg:my-0 transition-all duration-700 ease-in-out ">
           <div className="md:w-3/4 xl:w-1/2 relative">
-            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">The Sizzzle</h3>
+            <h3 className="text-4xl xl:text-4xl 2xl:text-4xl">The Sizzzle</h3>
             <p className="text-lg lg:text-base 2xl:text-2xl my-3">
               Revolutionizing Food Blogging into a simpler and minimalist social
               media type application.
@@ -80,7 +81,7 @@ const ProjectSection = () => {
               </a>
             </div>
           </div>
-          <div className="h-full w-full md:pt-12 lg:p-0">
+          <div className="h-full w-full md:pt-12 lg:p-0 hidden md:block">
             <iframe
               className="h-64 w-full mt-5   md:h-56 lg:h-72 lg:w-full   2xl:h-96 md:pb-20 2xl:pb-16  "
               src="https://www.youtube.com/embed/yH-b5kJo_mY"
@@ -91,19 +92,23 @@ const ProjectSection = () => {
           </div>
         </div>
 
-        <div className="col-span-3 w-full flex flex-col md:flex-row items-center justify-center">
+        <div className="group col-span-3 w-full flex flex-col md:flex-row items-center justify-center">
           <motion.div
-            className={`expanding-grid-item bg-purple-700  min-h-80 md:h-72 2xl:h-96 p-4 rounded-lg flex flex-col items-center md:flex-row my-5 md:my-0 transition-all 0.5s ease-in-out md:mr-3 ${
+            className={`expanding-grid-item peer bg-purple-700 min-h-80 md:h-72 2xl:h-96 p-4 rounded-lg flex flex-col items-center md:flex-row my-5 md:my-0 transition-all 0.5s ease-in-out md:mr-3 ${
               span3 ? "lg:w-2/3" : "lg:w-1/3"
             }`}
             transition={{ duration: 2 }}
             onHoverStart={growGrid3}
           >
-            <div>
-              <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">
+            <div className={`h-full ${span3 && "w-full"}`}>
+              <h3 className="transition-all ease-in-out duration-300 text-4xl 2xl:text-4xl">
                 Esthetician Business Website
               </h3>
-              <p className="text-lg lg:text-base 2xl:text-2xl my-3 ">
+              <p
+                className={`text-lg lg:text-base 2xl:text-2xl my-3 ${
+                  span3 && "w-full line-clamp-5"
+                }`}
+              >
                 Features a beautifully designed website showcasing an
                 estheticians business. The website has helped the owner get more
                 bookings.
@@ -127,13 +132,18 @@ const ProjectSection = () => {
               </div>
             </div>
             {
-              <img
-                src={"/lorient_mockup.png"}
-                alt="image of my project thumnail"
-                className={`object-cover w-96 md:w-64  md:h-64 lg:mx-0 ${
+              <div
+                className={`relative  md:w-3/4 md:h-full lg:mx-0 ${
                   span4 ? "hidden" : "md:block"
                 }`}
-              />
+              >
+                <Image
+                  src={"/lorient_mockup.png"}
+                  alt="image of my project thumnail"
+                  layout="fill"
+                  className="object-cover"
+                />
+              </div>
             }
           </motion.div>
 
@@ -145,7 +155,7 @@ const ProjectSection = () => {
             onHoverEnd={growReset}
             transition={{ duration: 2 }}
           >
-            <h3 className="text-4xl xl:text-4xl 2xl:text-5xl">
+            <h3 className="text-4xl xl:text-4xl 2xl:text-4xl">
               See all projects
             </h3>
             <motion.img
@@ -164,10 +174,12 @@ const ProjectSection = () => {
               whileHover={{ rotate: 20 }}
             />
             <Link href="/projects">
-              <BiRightTopArrowCircle
-                size={64}
-                className="absolute right-8 bottom-8 cursor-pointer"
-              />
+              <div>
+                <BiRightTopArrowCircle
+                  size={64}
+                  className="absolute right-8 bottom-8 cursor-pointer"
+                />
+              </div>
             </Link>
           </motion.div>
         </div>

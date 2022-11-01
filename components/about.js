@@ -7,7 +7,7 @@ const About = () => {
         className="w-3/4 lg:w-1/2"
       />
       <div className="flex flex-col mb-5 items-start">
-        <h2 className="text-3xl xl:text-5xl text-gray-100 lg:max-w-xl">
+        <h2 className="text-3xl xl:text-5xl text-gray-100 lg:max-w-xl tracking-[0.03em]">
           <span className="text-red-400">Specialist</span> in creative digital
           products.
         </h2>

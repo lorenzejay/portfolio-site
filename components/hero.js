@@ -23,11 +23,16 @@ const Hero = () => {
             Lorenze Jay<span>👋</span>
           </p>
           <h1 className="text-2xl text-white z-3 font-normal mb-10 xl:text-2xl py-2  md:w-3/4 lg:max-w-[400px] w-11/12">
-            I help clients deliver frontend solutions that engage users
-            effectively.
+            I help technology startups, artists, and professional services
+            <span className="text-secondary font-medium">
+              {" "}
+              convert visitors to users.
+            </span>
           </h1>
           <Link href="/projects">
-            <button className="btn btn-primary">See Projects</button>
+            <button className="btn btn-primary w-48 tracking-[0.08em]">
+              See Work
+            </button>
           </Link>
         </div>
         <div className="lg:w-1/2 z-10 mx-auto ">
