@@ -42,7 +42,7 @@ const Hero = () => {
               alt="Portrait of Lorenze Jay Hernandez"
               layout="fill"
               objectFit="cover"
-              className="rounded-full shadow-2xl hover:scale-125 transition-transform ease-in-out"
+              className="rounded-full shadow-2xl hover:scale-125 transition-transform ease-in-out duration-500"
             />
           </div>
         </div>
