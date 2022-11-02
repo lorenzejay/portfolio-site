@@ -19,9 +19,9 @@ const About = () => {
       <Layout className="absolute w-full">
         <main className="min-h-screen">
           <PageBanners title="About Me" className="bg-blue-400" />
-          <div className="py-12 w-full flex flex-col lg:flex-row justify-around lg:space-x-20">
+          <div className="py-12 w-full flex flex-col lg:flex-row justify-around lg:space-x-20 space-y-12 lg:space-y-0">
             <div className="lg:w-1/2">
-              <div className="relative w-full h-full lg:w-[400px] lg:h-[400px]">
+              <div className="relative w-64 h-64 mx-auto md:w-[400px] md:h-[400px]">
                 <Image
                   src="/ljaph-5.jpg"
                   layout="fill"
