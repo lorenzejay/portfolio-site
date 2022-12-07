@@ -29,7 +29,7 @@ const Hero = () => {
               convert visitors to users.
             </span>
           </h1>
-          <Link href="/projects">
+          <Link href="https://www.upliftdigitalsolutions.com/">
             <button className="btn btn-primary w-48 tracking-[0.08em]">
               See Work
             </button>
