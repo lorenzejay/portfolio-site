@@ -7,7 +7,7 @@ import Link from "next/link";
 const socialLinks = [
   {
     name: "personal website",
-    href: "lorenzejay.dev",
+    href: "/",
   },
   {
     name: "github",
